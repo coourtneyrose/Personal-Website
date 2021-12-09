@@ -1,0 +1,16 @@
+---
+title: "Courtney Rose"
+description: |
+  This is my course project for STA 518, which doubles as a personal website for myself.
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+```
+
+![](InternPicture.jpg)

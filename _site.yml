@@ -1,0 +1,15 @@
+name: "website"
+title: "Courtney Rose"
+description: |
+output_dir: "_site"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "Resources"
+      href: resources.html
+    - icon: fa fa-linkedin
+      href: https://www.linkedin.com/in/courtneymrose
+    - icon: fa fa-github
+      href: https://www.github.com/coourtneyrose
+output: distill::distill_article
