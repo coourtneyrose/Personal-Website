@@ -47,7 +47,7 @@ Clifton Strengths {#clifton}
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Click [here]() to go back to my personal website.
+Click [here](https://frosty-beaver-3fd4d5.netlify.app/) to go back to my personal website.
 
 This resume was made with the R package [**pagedown**](https://github.com/rstudio/pagedown).
 

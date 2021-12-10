@@ -12,4 +12,14 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
  
+### Contents of this website
 
+I have included the learning objectives for STA 518 and evidence that I have satisfied each objective under the **Learning Objectives ** tab. 
+
+I have included my course project, a resume made with {pagedown}, under the **Course Project** tab. 
+
+I have also included direct links to websites, videos, textbooks, and seminars that I have found helpful throughout my journey of learning R in the **Resources** tab. 
+
+### Plan of Action
+
+After this course, I hope to transform this website into more of a personal website for myself to use. I believe this would be a great demonstration of my skills on RStudio.
