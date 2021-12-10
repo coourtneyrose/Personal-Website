@@ -1,0 +1,78 @@
+---
+title: "Import, Manage, and Clean Data"
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup ,include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r importing_packages}
+library(tidyverse)
+library(ggplot2)
+```
+The goal: To show my understanding of the learning objectives and provide evidence, I chose a data set about the nutrition facts of Starbucks' drinks. I hope to use this data set to showcase what I have learned about R throughout the semester. 
+
+--------------------------------------
+
+### 1. I can import data from a variety of sources.
+
+```{r importdata, echo=TRUE}
+drinks <- read_csv("~/STA 518/CourseProject/Personal-Website/_objectives/2021-12-09-numberone/
+                   starbucks_drinkMenu_expanded.csv")
+```
+
+![](~/STA 518/Course Project/Personal-Website/_objectives/2021-12-09-numberone/importdata.PNG)
+
+
+The above code chunk proves that I can import data from an external source, a .csv file. 
+I downloaded this dataset onto my computer from Kaggle, then I uploaded the file into
+R Studio, then read it into my code. If this was an Excel file, I could have used
+drinks <- read_xlsx("~/STA 518/CourseProject/Personal-Website/
+_objectives/2021-12-09-numberone/starbucks_drinkMenu_expanded.xlxs") instead.
+
+
+--------------------------------------
+
+### 2. I can write professional reports using R Markdown.
+```{r professional_reports, message=TRUE}
+
+```
+
+
+--------------------------------------
+
+### 3. I can isolate information from a larger data source.
+```{r isolate, message=TRUE}
+
+```
+
+
+--------------------------------------
+
+### 4. I can combine information from multiple data sources.
+```{r combine, message=TRUE}
+
+```
+
+
+--------------------------------------
+
+### 5. I can restructure information to be in a “tidy” format.
+```{r tidydata, message=TRUE}
+
+```
+
+
+--------------------------------------
+### 6. I can transform information to be in a format better suited for specific tasks.
+```{r transform, message=TRUE}
+
+```
+
+
+
+

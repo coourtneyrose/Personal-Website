@@ -1,11 +1,19 @@
 name: "website"
+theme: courtney_theme.css
 title: "Courtney Rose"
 description: |
 output_dir: "_site"
+creative_commons: CC BY
+favicon: bitmojis/smile_logo.png
 navbar:
   right:
     - text: "Home"
       href: index.html
+    - text: "Learning Objectives"
+      href: objectives.html
+      toc: true
+    - text: "Resume"
+      href: resume.html 
     - text: "Resources"
       href: resources.html
     - icon: fa fa-linkedin

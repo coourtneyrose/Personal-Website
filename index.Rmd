@@ -1,7 +1,6 @@
 ---
-title: "Courtney Rose"
-description: |
-  This is my course project for STA 518, which doubles as a personal website for myself.
+title: "Courtney Rose's Course Project"
+description: This is my course project for STA 518, which doubles as a personal website for myself.
 site: distill::distill_website
 ---
 
@@ -12,5 +11,5 @@ knitr::opts_chunk$set(echo = FALSE)
 # https://rstudio.github.io/distill/website.html
 
 ```
+ 
 
-![](InternPicture.jpg)

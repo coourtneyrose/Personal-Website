@@ -1,5 +1,5 @@
 ---
-title: "Resources"
+title: "Resources that I loved..."
 listing: posts
 ---
 
