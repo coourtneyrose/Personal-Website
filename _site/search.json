@@ -2,19 +2,26 @@
   "articles": [
     {
       "path": "index.html",
-      "title": "Courtney Rose",
-      "description": "This is my course project for STA 518, which doubles as a personal website for myself.\n",
+      "title": "Courtney Rose's Course Project",
+      "description": "This is my course project for STA 518, which doubles as a personal website for myself.",
       "author": [],
-      "contents": "\n\n\n\n\n",
-      "last_modified": "2021-12-09T17:45:11+00:00"
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-12-09T23:06:17+00:00"
+    },
+    {
+      "path": "objectives.html",
+      "title": "Learning Objectives for STA 518...",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-12-09T23:08:28+00:00"
     },
     {
       "path": "resources.html",
-      "title": "Resources",
+      "title": "Resources that I loved...",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-12-09T17:45:11+00:00"
+      "last_modified": "2021-12-09T23:06:18+00:00"
     }
   ],
-  "collections": ["posts/posts.json"]
+  "collections": ["posts/posts.json", "objectives/objectives.json"]
 }

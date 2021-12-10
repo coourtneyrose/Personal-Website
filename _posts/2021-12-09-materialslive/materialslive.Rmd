@@ -16,8 +16,10 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-This is a seminar by [Alison Hill](https://www.rstudio.com/authors/alison-hill/) and [Desiree De Leon](https://www.rstudio.com/authors/desir%C3%A9e-de-leon/) on how to share R Markdown files and Distill websites online using the drag-and-drop  function on [Netlify](https://app.netlify.com/drop).
+This is a seminar by [Alison Hill](https://www.rstudio.com/authors/alison-hill/) and [Desiree De Leon](https://www.rstudio.com/authors/desir%C3%A9e-de-leon/) on how to share R Markdown files and Distill websites online using the drag-and-drop  function on [Netlify](https://app.netlify.com/drop). 
 
-This [video](https://www.rstudio.com/resources/webinars/sharing-on-short-notice-how-to-get-your-materials-online-with-r-markdown/) was very descriptive and helped me a lot with understanding how to make my distill website live for others to view. I was mostly interested in {rmarkdown} and {pagedown}, but they also talk about {bookdown} and {blogdown} if you are interested. This seminar was aimed at educators to help them make more reproducible material for their students.
+![Netlify makes it easy to create a unique URL for R Markdowns and Distill websites.](~/STA 518/Course Project/Personal-Website/_posts/2021-12-09-materialslive/netlify.PNG)
+
+This [video](https://www.rstudio.com/resources/webinars/sharing-on-short-notice-how-to-get-your-materials-online-with-r-markdown/) was very descriptive and helped me a lot with understanding how to make my distill website live for others to view. I was mostly interested in {rmarkdown} and {pagedown}, but they also talk about {bookdown} and {blogdown} if you are interested. This seminar was aimed at educators to help them make more reproducible material for their students, but it was very helpful for my project too!
 
 

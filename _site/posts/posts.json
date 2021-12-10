@@ -13,8 +13,8 @@
     "categories": [],
     "contents": "\nThis Youtube video by Lisa Lendway was really helpful in creating my distill website. Lisa is a professor at Macalester College and an RStudio instructor. This tutorial was from A to Z how to create a beautiful {distill} website. It was inspiring to also see her struggling through R and learning from her mistakes throughout the video. Her finished website from this video looked really cool, so make sure to check that out too.\n\n\n\n",
     "preview": "posts/2021-12-09-buildingwebsite/lisa_lendway.PNG",
-    "last_modified": "2021-12-09T17:56:52+00:00",
-    "input_file": "buildingwebsite.knit.md"
+    "last_modified": "2021-12-09T18:29:37+00:00",
+    "input_file": {}
   },
   {
     "path": "posts/2021-12-09-materialslive/",
@@ -32,9 +32,9 @@
     ],
     "date": "2020-03-31",
     "categories": [],
-    "contents": "\nThis is a seminar by Alison Hill and Desiree De Leon on how to share R Markdown files and Distill websites online using the drag-and-drop function on Netlify.\nThis video was very descriptive and helped me a lot with understanding how to make my distill website live for others to view. I was mostly interested in {rmarkdown} and {pagedown}, but they also talk about {bookdown} and {blogdown} if you are interested. This seminar was aimed at educators to help them make more reproducible material for their students.\n\n\n\n",
+    "contents": "\nThis is a seminar by Alison Hill and Desiree De Leon on how to share R Markdown files and Distill websites online using the drag-and-drop function on Netlify.\nNetlify makes it easy to create a unique URL for R Markdowns and Distill websites.This video was very descriptive and helped me a lot with understanding how to make my distill website live for others to view. I was mostly interested in {rmarkdown} and {pagedown}, but they also talk about {bookdown} and {blogdown} if you are interested. This seminar was aimed at educators to help them make more reproducible material for their students, but it was very helpful for my project too!\n\n\n\n",
     "preview": "posts/2021-12-09-materialslive/Sharing_on_short_notice.PNG",
-    "last_modified": "2021-12-09T17:37:04+00:00",
+    "last_modified": "2021-12-09T21:00:00+00:00",
     "input_file": {}
   }
 ]
