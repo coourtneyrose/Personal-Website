@@ -1,0 +1,145 @@
+---
+title: "Courtney Rose's Resume"
+description: This is my resume
+site: distill::distill_website
+output:
+    pagedown::html_resume:
+      self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include=FALSE}
+library(pagedown)
+```
+
+
+Aside
+================================================================================
+
+
+![alt text here](~/STA 518/Course Project/Personal-Website/InternPicture.jpg)
+
+
+<i class="far fa-id-card"></i> Connect with me {#contact}
+--------------------------------------------------------------------------------
+
+- <i class="fa fa-envelope"></i> roseco@mail.gvsu.edu
+- <i class="fa fa-linkedin"></i> [linkedin.com/in/courtneymrose](https://www.linkedin.com/in/courtneymrose)
+- <i class="fa fa-github"></i> [github.com/coourtneyrose](https://github.com/coourtneyrose)
+- <i class="fa fa-phone"></i> +1 248-935-9198
+- For more information, please contact me via email.
+
+
+Clifton Strengths {#clifton}
+--------------------------------------------------------------------------------
+
+1. Includer
+2. Positivity
+3. Achiever
+4. Futuristic
+5. Input
+
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+Click [here]() to go back to my personal website.
+
+This resume was made with the R package [**pagedown**](https://github.com/rstudio/pagedown).
+
+Last updated on `r Sys.Date()`.
+
+
+
+Main
+================================================================================
+
+Courtney Rose {#title}
+--------------------------------------------------------------------------------
+
+### Currently seeking an internship focused in biostatistics
+
+I am a biostatistics graduate student seeking to contribute my problem-solving
+and leadership skills to an internship related to biostatistics during the 
+completion of my graduate studies. Experience in utilizing SAS, SPSS, R, 
+GitHub, SQL and Microsoft Office throughout a previous internship and 
+coursework provides a solid foundation to aid me in this position.
+
+
+Education {data-icon=anchor}
+--------------------------------------------------------------------------------
+
+### Grand Valley State University
+
+M.S. in [Biostatistics](https://www.gvsu.edu/catalog/program/master-of-science-in-biostatistics.htm)
+
+Grand Rapids, Michigan
+
+2023
+
+Data Science Society
+
+### Grand Valley State University
+
+Bachelor of Science in [Statistics](https://www.gvsu.edu/catalog/program/bachelor-of-arts-or-bachelor-of-science-in-statistics.htm)
+
+Grand Rapids, Michigan
+
+2021
+
+GPA: 0.0
+  
+
+Professional Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+### Graduate Assistant
+
+Grand Valley State University Statistics Department
+
+Grand Rapids, Michigan
+
+2021-2022
+
+- Coordinate with a professor to grade student assignments.
+- Create SAS code to go along with student notes.
+- Work in the tutoring center to aide students in statistics coursework.
+
+### Data & Evaluation Intern
+
+[Detroit Police Athletic League](https://detroitpal.org/)
+
+Detroit, Michigan
+
+2021
+
+- Integrated survey and [demographic data](https://record.umich.edu/articles/midas-detroit-police-athletic-league-to-assess-youth-programs/) from multiple locations into Salesforce.
+- Analyzed over 10,000 surveys from youth, parents, and volunteers.
+- Data collection, data cleaning, and data analyzing.
+
+### [Structured Learning Assistance](https://www.gvsu.edu/sla-pass/frequently-asked-questions-7.htm) Facilitator
+
+Grand Valley State University Tutoring Center
+
+Grand Rapids, Michigan
+
+2020
+
+- Embedded tutor for an introductory statistics course.
+- My class had the second highest final exam scores out of all introductory statistics courses. 
+- Created and led engaging activities for a class of twenty college students to conquer the material twice a week. 
+
+### After School Tutor
+
+[TRiO Upward Bound](https://www.gvsu.edu/ub/), Union High School
+
+Grand Rapids, Michigan
+
+2018
+
+- Tutored high schoolers that are college-bound in their high school courses, specializing in science and math.
+- Provided advice and encouragement for resumes, college applications, college admissions essays, and FAFSA applications.

@@ -93,8 +93,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <link rel="icon" type="image/png" href="../../bitmojis/smile_logo.png"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2021-12-10"/>
-<meta property="article:created" itemprop="dateCreated" content="2021-12-10"/>
+<meta property="article:published" itemprop="datePublished" content="2021-12-16"/>
+<meta property="article:created" itemprop="dateCreated" content="2021-12-16"/>
+<meta name="article:author" content="Courtney Rose"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
 <meta property="og:title" content="Courtney Rose: Import, Manage, and Clean Data"/>
@@ -110,12 +111,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","output","date"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Import, Manage, and Clean Data"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["12-10-2021"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","author","date","preview","output"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Import, Manage, and Clean Data"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Courtney Rose"]}]}]},{"type":"character","attributes":{},"value":["12-16-2021"]},{"type":"character","attributes":{},"value":["bitmoji_logo.png"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["importdata.PNG","numberone_files/anchor-4.2.2/anchor.min.js","numberone_files/bowser-1.9.3/bowser.min.js","numberone_files/distill-2.2.21/template.v2.js","numberone_files/header-attrs-2.9/header-attrs.js","numberone_files/jquery-1.11.3/jquery.min.js","numberone_files/popper-2.6.0/popper.min.js","numberone_files/tippy-6.2.7/tippy-bundle.umd.min.js","numberone_files/tippy-6.2.7/tippy-light-border.css","numberone_files/tippy-6.2.7/tippy.css","numberone_files/tippy-6.2.7/tippy.umd.min.js","numberone_files/webcomponents-2.0.0/webcomponents.js","starbucks_drinkMenu_expanded.csv"]}
+  {"type":"character","attributes":{},"value":["bitmoji_logo.png","importdata.PNG","numberone_files/anchor-4.2.2/anchor.min.js","numberone_files/bowser-1.9.3/bowser.min.js","numberone_files/distill-2.2.21/template.v2.js","numberone_files/header-attrs-2.9/header-attrs.js","numberone_files/jquery-1.11.3/jquery.min.js","numberone_files/popper-2.6.0/popper.min.js","numberone_files/tippy-6.2.7/tippy-bundle.umd.min.js","numberone_files/tippy-6.2.7/tippy-light-border.css","numberone_files/tippy-6.2.7/tippy.css","numberone_files/tippy-6.2.7/tippy.umd.min.js","numberone_files/webcomponents-2.0.0/webcomponents.js","starbucks_drinkMenu_expanded.csv"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2375,7 +2376,7 @@ d-appendix d-footnote-list a.footnote-backlink {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Import, Manage, and Clean Data","authors":[],"publishedDate":"2021-12-10T00:00:00.000+00:00"}
+{"title":"Import, Manage, and Clean Data","authors":[{"author":"Courtney Rose","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-12-16T00:00:00.000+00:00","citationText":"Rose, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2389,7 +2390,7 @@ d-appendix d-footnote-list a.footnote-backlink {
 <div class="nav-right">
 <a href="../../index.html">Home</a>
 <a href="../../objectives.html">Learning Objectives</a>
-<a href="../../resume.html">Resume</a>
+<a href="../../CRresume.html">Course Project</a>
 <a href="../../resources.html">Resources</a>
 <a href="https://www.linkedin.com/in/courtneymrose">
 <i class="fa fa-linkedin" aria-hidden="true"></i>
@@ -2412,6 +2413,11 @@ d-appendix d-footnote-list a.footnote-backlink {
 
 </div>
 
+<div class="d-byline">
+  Courtney Rose  
+  
+<br/>12-16-2021
+</div>
 
 <div class="d-article">
 <div class="layout-chunk" data-layout="l-body">
@@ -2428,7 +2434,7 @@ d-appendix d-footnote-list a.footnote-backlink {
 </div>
 </div>
 <p><img src="importdata.PNG" /></p>
-<p>The above code chunk proves that I can import data from an external source, a .csv file. I downloaded this dataset onto my computer from Kaggle, then I uploaded the file into R Studio, then read it into my code. If this was an Excel file, I could have used drinks &lt;- read_xlsx("~/STA 518/CourseProject/Personal-Website/ _objectives/2021-12-09-numberone/starbucks_drinkMenu_expanded.xlxs") instead.</p>
+<p>The above code chunk proves that I can import data from an external source, a .csv file. I downloaded this dataset onto my computer from Kaggle, then I uploaded the file into R Studio, then read it into my code. If this was an Excel file, I could have used drinks &lt;- read_xlsx("~/STA 518/CourseProject/Personal-Website/ _objectives/2021-12-09-numberone/starbucks_drinkMenu_expanded.xlxs") instead. By showing that I can import both Excel and .csv files, that means that I can import data from a variety of sources.</p>
 <hr />
 <h3 id="i-can-write-professional-reports-using-r-markdown.">2. I can write professional reports using R Markdown.</h3>
 <div class="layout-chunk" data-layout="l-body">
@@ -2436,6 +2442,7 @@ d-appendix d-footnote-list a.footnote-backlink {
 </div>
 <hr />
 <h3 id="i-can-isolate-information-from-a-larger-data-source.">3. I can isolate information from a larger data source.</h3>
+I am going to isolate the drinks that contain coffee or espresso. Coffee is usually my drink of choice, so I want to compare between the different types. This includes coffee, classic and signature espresso drinks, and frappuccinos.
 <div class="layout-chunk" data-layout="l-body">
 
 </div>

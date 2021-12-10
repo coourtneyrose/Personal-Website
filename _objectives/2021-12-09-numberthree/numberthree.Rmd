@@ -1,9 +1,9 @@
 ---
 title: "Write R programs for simulations from probability models and randomization-based experiments."
 description: |
-  A short description of the post.
 author:
   - name: Courtney Rose
+preview: experiments.png
 output:
   distill::distill_article:
     self_contained: false

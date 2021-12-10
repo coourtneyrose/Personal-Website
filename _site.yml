@@ -11,9 +11,8 @@ navbar:
       href: index.html
     - text: "Learning Objectives"
       href: objectives.html
-      toc: true
-    - text: "Resume"
-      href: resume.html 
+    - text: "Course Project"
+      href: CRresume.html
     - text: "Resources"
       href: resources.html
     - icon: fa fa-linkedin

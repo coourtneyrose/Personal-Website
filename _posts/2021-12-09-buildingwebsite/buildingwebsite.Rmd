@@ -1,7 +1,6 @@
 ---
 title: "Building a website using R {distill}"
 description: |
-  A short description of the post.
 author:
   - name: Lisa Lendway
 date: 12-15-2020

@@ -1,9 +1,9 @@
 ---
 title: "Use source documentation and other I can identify and correct common errors and in R programs."
 description: |
-  A short description of the post.
 author:
   - name: Courtney Rose
+preview: identify.png
 output:
   distill::distill_article:
     self_contained: false

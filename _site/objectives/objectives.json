@@ -3,80 +3,85 @@
     "path": "objectives/2021-12-09-numberone/",
     "title": "Import, Manage, and Clean Data",
     "description": {},
-    "author": [],
-    "date": "2021-12-10",
-    "categories": [],
-    "contents": "\n\n\n\nThe goal: To show my understanding of the learning objectives and provide evidence, I chose a data set about the nutrition facts of Starbucks’ drinks. I hope to use this data set to showcase what I have learned about R throughout the semester.\n1. I can import data from a variety of sources.\n\n\ndrinks <- read_csv(\"~/STA 518/CourseProject/Personal-Website/_objectives/2021-12-09-numberone/\n                   starbucks_drinkMenu_expanded.csv\")\n\n\n\n\nThe above code chunk proves that I can import data from an external source, a .csv file. I downloaded this dataset onto my computer from Kaggle, then I uploaded the file into R Studio, then read it into my code. If this was an Excel file, I could have used drinks <- read_xlsx(\"~/STA 518/CourseProject/Personal-Website/ _objectives/2021-12-09-numberone/starbucks_drinkMenu_expanded.xlxs\") instead.\n2. I can write professional reports using R Markdown.\n\n\n\n3. I can isolate information from a larger data source.\n\n\n\n4. I can combine information from multiple data sources.\n\n\n\n5. I can restructure information to be in a “tidy” format.\n\n\n\n6. I can transform information to be in a format better suited for specific tasks.\n\n\n\n\n\n\n",
-    "preview": {},
-    "last_modified": "2021-12-10T02:11:13+00:00",
-    "input_file": "numberone.knit.md"
-  },
-  {
-    "path": "objectives/2021-12-09-numberfive/",
-    "title": "Write clear, efficient, and well-documented R programs.",
-    "description": "A short description of the post.",
     "author": [
       {
         "name": "Courtney Rose",
         "url": {}
       }
     ],
-    "date": "2021-12-09",
+    "date": "2021-12-16",
     "categories": [],
-    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2021-12-09T22:33:56+00:00",
+    "contents": "\n\n\n\nThe goal: To show my understanding of the learning objectives and provide evidence, I chose a data set about the nutrition facts of Starbucks’ drinks. I hope to use this data set to showcase what I have learned about R throughout the semester.\n1. I can import data from a variety of sources.\n\n\ndrinks <- read_csv(\"~/STA 518/CourseProject/Personal-Website/_objectives/2021-12-09-numberone/\n                   starbucks_drinkMenu_expanded.csv\")\n\n\n\n\nThe above code chunk proves that I can import data from an external source, a .csv file. I downloaded this dataset onto my computer from Kaggle, then I uploaded the file into R Studio, then read it into my code. If this was an Excel file, I could have used drinks <- read_xlsx(\"~/STA 518/CourseProject/Personal-Website/ _objectives/2021-12-09-numberone/starbucks_drinkMenu_expanded.xlxs\") instead. By showing that I can import both Excel and .csv files, that means that I can import data from a variety of sources.\n2. I can write professional reports using R Markdown.\n\n\n\n3. I can isolate information from a larger data source.\nI am going to isolate the drinks that contain coffee or espresso. Coffee is usually my drink of choice, so I want to compare between the different types. This includes coffee, classic and signature espresso drinks, and frappuccinos.\n\n\n\n4. I can combine information from multiple data sources.\n\n\n\n5. I can restructure information to be in a “tidy” format.\n\n\n\n6. I can transform information to be in a format better suited for specific tasks.\n\n\n\n\n\n\n",
+    "preview": "objectives/2021-12-09-numberone/bitmoji_logo.png",
+    "last_modified": "2021-12-10T15:46:54+00:00",
+    "input_file": {}
+  },
+  {
+    "path": "objectives/2021-12-09-numberfive/",
+    "title": "Write clear, efficient, and well-documented R programs.",
+    "description": {},
+    "author": [
+      {
+        "name": "Courtney Rose",
+        "url": {}
+      }
+    ],
+    "date": "2021-12-10",
+    "categories": [],
+    "contents": "\n\n\n\n",
+    "preview": "objectives/2021-12-09-numberfive/write.png",
+    "last_modified": "2021-12-10T15:55:17+00:00",
     "input_file": {}
   },
   {
     "path": "objectives/2021-12-09-numberfour/",
     "title": "Use source documentation and other I can identify and correct common errors and in R programs.",
-    "description": "A short description of the post.",
+    "description": {},
     "author": [
       {
         "name": "Courtney Rose",
         "url": {}
       }
     ],
-    "date": "2021-12-09",
+    "date": "2021-12-10",
     "categories": [],
     "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2021-12-09T22:34:06+00:00",
+    "preview": "objectives/2021-12-09-numberfour/identify.png",
+    "last_modified": "2021-12-10T15:50:42+00:00",
     "input_file": {}
   },
   {
     "path": "objectives/2021-12-09-numberthree/",
     "title": "Write R programs for simulations from probability models and randomization-based experiments.",
-    "description": "A short description of the post.",
+    "description": {},
     "author": [
       {
         "name": "Courtney Rose",
         "url": {}
       }
     ],
-    "date": "2021-12-09",
+    "date": "2021-12-10",
     "categories": [],
     "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2021-12-09T22:34:23+00:00",
+    "preview": "objectives/2021-12-09-numberthree/experiments.png",
+    "last_modified": "2021-12-10T15:49:33+00:00",
     "input_file": {}
   },
   {
     "path": "objectives/2021-12-09-numbertwo/",
     "title": "Create graphical displays  and numerical summaries of data for exploratory analysis and presentations.",
-    "description": "A short description of the post.",
+    "description": {},
     "author": [
       {
         "name": "Courtney Rose",
         "url": {}
       }
     ],
-    "date": "2021-12-09",
+    "date": "2021-12-10",
     "categories": [],
     "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2021-12-09T22:34:30+00:00",
+    "preview": "objectives/2021-12-09-numbertwo/graphs.png",
+    "last_modified": "2021-12-10T15:48:01+00:00",
     "input_file": {}
   }
 ]
