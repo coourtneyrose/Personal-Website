@@ -1,6 +1,6 @@
 ---
 title: "Courtney Rose's Course Project"
-description: This is my course project for STA 518, which doubles as a personal website for myself.
+description: Welcome to my STA 518 Course website!
 site: distill::distill_website
 ---
 
@@ -11,7 +11,12 @@ knitr::opts_chunk$set(echo = FALSE)
 # https://rstudio.github.io/distill/website.html
 
 ```
- 
+<center>
+
+![](~/STA 518/Course Project/Personal-Website/bitmojis/welcome.png){width=30%}
+
+</center>
+
 ### Contents of this website
 
 I have included the learning objectives for STA 518 and evidence that I have satisfied each objective under the **Learning Objectives ** tab. 
@@ -22,4 +27,4 @@ I have also included direct links to websites, videos, textbooks, and seminars t
 
 ### Plan of Action
 
-After this course, I hope to transform this website into more of a personal website for myself to use. I believe this would be a great demonstration of my skills on RStudio.
+After this course, I hope to transform this website into more of a personal website for myself to use. I believe this would be a great demonstration of my skills on RStudio. It will also be convenient, because my resume is already attached and I havae links to my LinkedIn and GitHub page on the navigation bar. 
