@@ -1,8 +1,25 @@
 [
   {
+    "path": "posts/2021-12-10-theme/",
+    "title": "Customization of {distill} website",
+    "description": {},
+    "author": [
+      {
+        "name": "Courtney Rose",
+        "url": {}
+      }
+    ],
+    "date": "2021-12-10",
+    "categories": [],
+    "contents": "\nTheme\nThe RStudio website has a Distill for R Markdown article that I referred to often when I was creating my website. I had no clue when I started creating this website and I really wanted it to personalize it to my liking. I started with the Theming section. I used the create_theme() function to create my personalized theme, called “courtney_theme.css”.\nColoring\nIt took me a long time to figure out what format the colors were in. I finally found that they are hex colors. Black is #000000, white is #FFFFFF, ad every other color is somewhere in between. I used a Hex to RGB Color Converter to get to the colors that I wanted for the background, headers, mouse hover, and font colors.\n\nThis is the color scheme I was going for.\nFont\nChanging fonts on the website did not end up being too tricky. I also found instructions on how to change the default font on the Distill for R Markdown article. First, I went to the Google Fonts website. Then I searched for the ones that I liked. I chose three fonts that I thought looked nice together and imported them into my courtney_theme.css and then inserted them into my code where I wanted them.\n\n\n\n",
+    "preview": "posts/2021-12-10-theme/hextorgb.PNG",
+    "last_modified": "2021-12-11T00:49:34+00:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2021-12-09-buildingwebsite/",
     "title": "Building a website using R {distill}",
-    "description": "A short description of the post.",
+    "description": {},
     "author": [
       {
         "name": "Lisa Lendway",
@@ -11,9 +28,9 @@
     ],
     "date": "2020-12-15",
     "categories": [],
-    "contents": "\nThis Youtube video by Lisa Lendway was really helpful in creating my distill website. Lisa is a professor at Macalester College and an RStudio instructor. This tutorial was from A to Z how to create a beautiful {distill} website. It was inspiring to also see her struggling through R and learning from her mistakes throughout the video. Her finished website from this video looked really cool, so make sure to check that out too.\n\n\n\n",
+    "contents": "\nThis Youtube video by Lisa Lendway was really helpful in creating my distill website. Lisa is a professor at Macalester College and an RStudio instructor. This tutorial was from A to Z how to create a beautiful {distill} website. It was inspiring to also see her struggling through R and learning from her mistakes throughout the video. It made me feel better when I was also struggling through creating and customizing my own website. Her finished website from this video looked really cool, so make sure to check that out too.\n\n\n\n",
     "preview": "posts/2021-12-09-buildingwebsite/lisa_lendway.PNG",
-    "last_modified": "2021-12-09T18:29:37+00:00",
+    "last_modified": "2021-12-11T00:51:52+00:00",
     "input_file": {}
   },
   {
@@ -32,9 +49,9 @@
     ],
     "date": "2020-03-31",
     "categories": [],
-    "contents": "\nThis is a seminar by Alison Hill and Desiree De Leon on how to share R Markdown files and Distill websites online using the drag-and-drop function on Netlify.\nNetlify makes it easy to create a unique URL for R Markdowns and Distill websites.This video was very descriptive and helped me a lot with understanding how to make my distill website live for others to view. I was mostly interested in {rmarkdown} and {pagedown}, but they also talk about {bookdown} and {blogdown} if you are interested. This seminar was aimed at educators to help them make more reproducible material for their students, but it was very helpful for my project too!\n\n\n\n",
+    "contents": "\nThis is a seminar by Alison Hill and Desiree De Leon on how to share R Markdown files and Distill websites online using the drag-and-drop function on Netlify. I used Netlify to make my website public. It gave me a random, funny URL, but it only costs about $15/year to create a custom URL. Maybe when I have an actual job, I will do that so my URL isn’t www.frosty-beaver-3fd4d5.netlify.app (no joke).\n\nNetlify makes it easy to create a unique URL for R Markdowns and Distill websites.\nThis video was very descriptive and helped me a lot with understanding how to make my distill website live for others to view. I was mostly interested in {rmarkdown} and {pagedown}, but they also talk about {bookdown} and {blogdown} if you are interested. This seminar was aimed at educators to help them make more reproducible material for their students, but it was very helpful for my project too!\n\n\n\n",
     "preview": "posts/2021-12-09-materialslive/Sharing_on_short_notice.PNG",
-    "last_modified": "2021-12-09T21:00:00+00:00",
+    "last_modified": "2021-12-11T00:47:21+00:00",
     "input_file": {}
   }
 ]

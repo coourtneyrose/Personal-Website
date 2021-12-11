@@ -1,6 +1,6 @@
 ---
-title: "Courtney Rose's Course Project"
-description: Welcome to my STA 518 Course website!
+title: "STA 518 Project"
+description: Welcome to my STA 518 Project website!
 site: distill::distill_website
 ---
 
@@ -25,6 +25,8 @@ I have included my course project, a resume made with {pagedown}, under the **Co
 
 I have also included direct links to websites, videos, textbooks, and seminars that I have found helpful throughout my journey of learning R in the **Resources** tab. 
 
+My *LinkedIn* and *Github* pages are available for quick access in the top right-hand corner of the navigation bar.
+
 ### Plan of Action
 
-After this course, I hope to transform this website into more of a personal website for myself to use. I believe this would be a great demonstration of my skills on RStudio. It will also be convenient, because my resume is already attached and I havae links to my LinkedIn and GitHub page on the navigation bar. 
+After this course, I hope to transform this website into more of a personal website for myself to use. I believe this would be a great demonstration of my skills on RStudio. It will also be convenient, because my resume is already attached. It will also be convenient to easily go back to the resources I have used while learning R to help me in the future. 

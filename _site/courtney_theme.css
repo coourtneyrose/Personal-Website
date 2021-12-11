@@ -23,8 +23,8 @@ html {
   --fig-cap-size:    13px;
   
   /*-- Main font colors --*/
-  --title-color:     #C6756C;
-  --header-color:    #C6756C;
+  --title-color:     #8A3E4B;
+  --header-color:    #8A3E4B;
   --body-color:      #2D1E1F;
   --aside-color:     #2D1E1F;
   --fig-cap-color:   #2D1E1F;
@@ -53,7 +53,7 @@ d-byline {
 /*-- ARTICLE APPENDIX --*/
 d-appendix {
   --heading-size:    15px;
-  --heading-color:   #2D1E1F;
+  --heading-color:   #8A3E4B;
   --text-size:       0.8em;
   --text-color:      #2D1E1F;
 }
@@ -63,7 +63,7 @@ d-appendix {
 
 .distill-site-header {
   --title-size:       25px;
-  --text-color:       #2D1E1F;
+  --text-color:       #F4F0EF;
   --text-size:        20px;
   --hover-color:      #8A3E4B;
   --bkgd-color:       #E8AAB1;

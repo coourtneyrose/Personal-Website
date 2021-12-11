@@ -15,5 +15,5 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-This [Youtube video](https://www.youtube.com/watch?v=Fm3bsYCilEU) by Lisa Lendway was really helpful in creating my distill website. Lisa is a professor at Macalester College and an RStudio instructor. This tutorial was from A to Z how to create a beautiful {distill} website. It was inspiring to also see her struggling through R and learning from her mistakes throughout the video. Her finished [website](https://lisalendway.netlify.app/) from this video looked really cool, so make sure to check that out too. 
+This [**Youtube video**](https://www.youtube.com/watch?v=Fm3bsYCilEU) by Lisa Lendway was really helpful in creating my distill website. Lisa is a professor at Macalester College and an RStudio instructor. This tutorial was from A to Z how to create a beautiful {distill} website. It was inspiring to also see her struggling through R and learning from her mistakes throughout the video. It made me feel better when I was also struggling through creating and customizing my own website. Her finished [**website**](https://lisalendway.netlify.app/) from this video looked really cool, so make sure to check that out too. 
 
