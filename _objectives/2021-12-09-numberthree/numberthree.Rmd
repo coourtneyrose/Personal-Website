@@ -9,13 +9,113 @@ output:
     self_contained: false
 ---
 
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(broom)
+library(infer)
+library(lmboot)
+library(MASS)
+midwest
+```
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+### 1. I can write a function that accomplishes a common analysis task.
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+```{r calc_range, echo=TRUE}
+calculate_range <- function(x){
+  range_results <- range(x)
+  range <- range_results[2] - range_results[1]
+  return(range)
+}
+```
+
+Calculating range is a common analysis task that I learned how to create a function for this semester.  
+
+### 2. I can apply a function to groupings within a data source.
+```{r apply_function, echo=TRUE, include=TRUE}
+calculate_range(midwest$poptotal)
+```
+```{r apply_function2, echo=TRUE, include=TRUE}
+calculate_range(1:10)
+```
+
+### 3. I can implement resampling methods to make conclusions about data.
+
+For this objective, I am going to bring in a new data set to show that I have accomplished this objective throughout the course. I plan to use bootstrapping, or sampling without replacement, to do a one-way ANOVA to understand if there is a difference between the midwest state's population of people living in poverty.
+
+```{r bootstrap, echo=TRUE}
+set.seed(19990502)
+ANOVA <- ANOVA.boot(poppovertyknown~
+                      as.factor(state),
+                    data=midwest, 
+                    B = 10000)
+ANOVA$`p-values`
+```
+For this example, I did a one-way ANOVA to decide if there was a difference in means between the states of the amount of people that are living in poverty. I set it up to resample 10000 times, got an insignificant p-value, meaning that there is no evidence to suggest that there is a significant difference between each state's amount of people living in poverty.
+
+
+### 4. I can use common probability distributions to simulate data and explore statistical ideas.
+
+I learned from this [video](https://www.youtube.com/watch?v=tzz4flrajr0) that was attached to Chapter 20 of the [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/simulation.html) by Roger Peng. 
+
+Random Number Generation:
+
+```{r normal, echo=TRUE}
+set.seed(34)
+x <- rnorm(15)
+x
+```
+
+Generating a random number from a normal distribution, 
+with a mean of 30 and standard deviation of 4:
+
+```{r random, echo=TRUE}
+set.seed(34)
+x <- rnorm(15, mean=30, sd=4)
+summary(x)
+```
+
+
+
+I learned the next step from [this video](https://www.youtube.com/watch?v=p7kSSSsv4ms) for random numbers from a linear model.
+
+Generate random number from a normal linear model, where intercept = 1 and the coefficient for X1 = 2.
+
+```{r linearmod, echo=TRUE}
+set.seed(34)
+x <- rnorm(100)
+e <- rnorm(100, 0, 2)
+y <- 1 + 2*x + e
+summary(y)
+plot(x, y)
+```
+
+This proves that I can explore statistical ideas through these probaility distributions. I definitely still need to look this up for help on how to do it, but I believe that I know how to play around with it enough to cover this subobjective. 
+
+### 5. I can fit a regression model for descriptive analysis.
+
+I did a multiple regression model to predict the poverty population, which I hope will demonstrate this subobjective. I used backwards selection to get a final model that only included predictors that were significantly contributing to the model. I believe that this is sufficient evidence for this subobjective, because I completed a multiple regression model for descriptive analysis.
+
+```{r mult_reg, echo=TRUE}
+mod_midwest <- lm(poppovertyknown ~ 
+                    poptotal + 
+                    popdensity + 
+                    popwhite + 
+                    popblack + 
+                    popamerindian + 
+                    popasian, 
+                  data = midwest)
+reduced_mod_midwest <- 
+  stepAIC(mod_midwest, 
+          direction = "backward")
+summary(reduced_mod_midwest)
+```
+
 
 

@@ -93,8 +93,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <link rel="icon" type="image/png" href="../../bitmojis/smile_logo.png"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2021-12-10"/>
-<meta property="article:created" itemprop="dateCreated" content="2021-12-10"/>
+<meta property="article:published" itemprop="datePublished" content="2021-12-16"/>
+<meta property="article:created" itemprop="dateCreated" content="2021-12-16"/>
 <meta name="article:author" content="Courtney Rose"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -111,12 +111,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","preview","output","date"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Write R programs for simulations from probability models and randomization-based experiments."]},{"type":"NULL"},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Courtney Rose"]}]}]},{"type":"character","attributes":{},"value":["experiments.png"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["12-10-2021"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","preview","output","date"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Write R programs for simulations from probability models and randomization-based experiments."]},{"type":"NULL"},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Courtney Rose"]}]}]},{"type":"character","attributes":{},"value":["experiments.png"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["12-16-2021"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["experiments.png","numberthree_files/anchor-4.2.2/anchor.min.js","numberthree_files/bowser-1.9.3/bowser.min.js","numberthree_files/distill-2.2.21/template.v2.js","numberthree_files/header-attrs-2.9/header-attrs.js","numberthree_files/jquery-1.11.3/jquery.min.js","numberthree_files/popper-2.6.0/popper.min.js","numberthree_files/tippy-6.2.7/tippy-bundle.umd.min.js","numberthree_files/tippy-6.2.7/tippy-light-border.css","numberthree_files/tippy-6.2.7/tippy.css","numberthree_files/tippy-6.2.7/tippy.umd.min.js","numberthree_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["experiments.png","numberthree_files/anchor-4.2.2/anchor.min.js","numberthree_files/bowser-1.9.3/bowser.min.js","numberthree_files/distill-2.2.21/template.v2.js","numberthree_files/figure-html5/linearmod-1.png","numberthree_files/header-attrs-2.9/header-attrs.js","numberthree_files/jquery-1.11.3/jquery.min.js","numberthree_files/popper-2.6.0/popper.min.js","numberthree_files/tippy-6.2.7/tippy-bundle.umd.min.js","numberthree_files/tippy-6.2.7/tippy-light-border.css","numberthree_files/tippy-6.2.7/tippy.css","numberthree_files/tippy-6.2.7/tippy.umd.min.js","numberthree_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2376,7 +2376,7 @@ d-appendix d-footnote-list a.footnote-backlink {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Write R programs for simulations from probability models and randomization-based experiments.","authors":[{"author":"Courtney Rose","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-12-10T00:00:00.000+00:00","citationText":"Rose, 2021"}
+{"title":"Write R programs for simulations from probability models and randomization-based experiments.","authors":[{"author":"Courtney Rose","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-12-16T00:00:00.000+00:00","citationText":"Rose, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2416,13 +2416,201 @@ d-appendix d-footnote-list a.footnote-backlink {
 <div class="d-byline">
   Courtney Rose  
   
-<br/>12-10-2021
+<br/>12-16-2021
 </div>
 
 <div class="d-article">
-<p>Distill is a publication format for scientific and technical writing, native to the web.</p>
-<p>Learn more about using Distill at <a href="https://rstudio.github.io/distill" class="uri">https://rstudio.github.io/distill</a>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://dplyr.tidyverse.org'>dplyr</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://broom.tidymodels.org/'>broom</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/tidymodels/infer'>infer</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>lmboot</span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://www.stats.ox.ac.uk/pub/MASS4/'>MASS</a></span><span class='op'>)</span>
+<span class='va'>midwest</span>
+</code></pre>
+</div>
+<pre><code># A tibble: 437 x 28
+     PID county    state  area poptotal popdensity popwhite popblack
+   &lt;int&gt; &lt;chr&gt;     &lt;chr&gt; &lt;dbl&gt;    &lt;int&gt;      &lt;dbl&gt;    &lt;int&gt;    &lt;int&gt;
+ 1   561 ADAMS     IL    0.052    66090      1271.    63917     1702
+ 2   562 ALEXANDER IL    0.014    10626       759      7054     3496
+ 3   563 BOND      IL    0.022    14991       681.    14477      429
+ 4   564 BOONE     IL    0.017    30806      1812.    29344      127
+ 5   565 BROWN     IL    0.018     5836       324.     5264      547
+ 6   566 BUREAU    IL    0.05     35688       714.    35157       50
+ 7   567 CALHOUN   IL    0.017     5322       313.     5298        1
+ 8   568 CARROLL   IL    0.027    16805       622.    16519      111
+ 9   569 CASS      IL    0.024    13437       560.    13384       16
+10   570 CHAMPAIGN IL    0.058   173025      2983.   146506    16559
+# … with 427 more rows, and 20 more variables: popamerindian &lt;int&gt;,
+#   popasian &lt;int&gt;, popother &lt;int&gt;, percwhite &lt;dbl&gt;, percblack &lt;dbl&gt;,
+#   percamerindan &lt;dbl&gt;, percasian &lt;dbl&gt;, percother &lt;dbl&gt;,
+#   popadults &lt;int&gt;, perchsd &lt;dbl&gt;, percollege &lt;dbl&gt;, percprof &lt;dbl&gt;,
+#   poppovertyknown &lt;int&gt;, percpovertyknown &lt;dbl&gt;,
+#   percbelowpoverty &lt;dbl&gt;, percchildbelowpovert &lt;dbl&gt;,
+#   percadultpoverty &lt;dbl&gt;, percelderlypoverty &lt;dbl&gt;, inmetro &lt;int&gt;,
+#   category &lt;chr&gt;</code></pre>
+</div>
+<h3 id="i-can-write-a-function-that-accomplishes-a-common-analysis-task.">1. I can write a function that accomplishes a common analysis task.</h3>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>calculate_range</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='va'>range_results</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/range.html'>range</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
+  <span class='va'>range</span> <span class='op'>&lt;-</span> <span class='va'>range_results</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span> <span class='op'>-</span> <span class='va'>range_results</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='va'>range</span><span class='op'>)</span>
+<span class='op'>}</span>
+</code></pre>
+</div>
+</div>
+<p>Calculating range is a common analysis task that I learned how to create a function for this semester.</p>
+<h3 id="i-can-apply-a-function-to-groupings-within-a-data-source.">2. I can apply a function to groupings within a data source.</h3>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>calculate_range</span><span class='op'>(</span><span class='va'>midwest</span><span class='op'>$</span><span class='va'>poptotal</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[1] 5103366</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>calculate_range</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[1] 9</code></pre>
+</div>
+<h3 id="i-can-implement-resampling-methods-to-make-conclusions-about-data.">3. I can implement resampling methods to make conclusions about data.</h3>
+<p>For this objective, I am going to bring in a new data set to show that I have accomplished this objective throughout the course. I plan to use bootstrapping, or sampling without replacement, to do a one-way ANOVA to understand if there is a difference between the midwest state’s population of people living in poverty.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>19990502</span><span class='op'>)</span>
+<span class='va'>ANOVA</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/lmboot/man/ANOVA.boot.html'>ANOVA.boot</a></span><span class='op'>(</span><span class='va'>poppovertyknown</span><span class='op'>~</span>
+                      <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>state</span><span class='op'>)</span>,
+                    data<span class='op'>=</span><span class='va'>midwest</span>, 
+                    B <span class='op'>=</span> <span class='fl'>10000</span><span class='op'>)</span>
+<span class='va'>ANOVA</span><span class='op'>$</span><span class='va'>`p-values`</span>
+</code></pre>
+</div>
+<pre><code>[1] 0.5659</code></pre>
+</div>
+<p>For this example, I did a one-way ANOVA to decide if there was a difference in means between the states of the amount of people that are living in poverty. I set it up to resample 10000 times, got an insignificant p-value, meaning that there is no evidence to suggest that there is a significant difference between each state’s amount of people living in poverty.</p>
+<h3 id="i-can-use-common-probability-distributions-to-simulate-data-and-explore-statistical-ideas.">4. I can use common probability distributions to simulate data and explore statistical ideas.</h3>
+<p>I learned from this <a href="https://www.youtube.com/watch?v=tzz4flrajr0">video</a> that was attached to Chapter 20 of the <a href="https://bookdown.org/rdpeng/rprogdatascience/simulation.html">R Programming for Data Science</a> by Roger Peng.</p>
+<p>Random Number Generation:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>34</span><span class='op'>)</span>
+<span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>15</span><span class='op'>)</span>
+<span class='va'>x</span>
+</code></pre>
+</div>
+<pre><code> [1] -0.138889971  1.199812897 -0.747722402 -0.575248177 -0.263581513
+ [6] -0.455492149  0.670620044 -0.849014621  1.066804504 -0.007460534
+[11] -0.402880091  0.719107939 -0.180058654  1.046190759  0.401254928</code></pre>
+</div>
+<p>Generating a random number from a normal distribution, with a mean of 30 and standard deviation of 4:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>34</span><span class='op'>)</span>
+<span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>15</span>, mean<span class='op'>=</span><span class='fl'>30</span>, sd<span class='op'>=</span><span class='fl'>4</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  26.60   28.28   29.44   30.40   32.78   34.80 </code></pre>
+</div>
+<p>I learned the next step from <a href="https://www.youtube.com/watch?v=p7kSSSsv4ms">this video</a> for random numbers from a linear model.</p>
+<p>Generate random number from a normal linear model, where intercept = 1 and the coefficient for X1 = 2.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>34</span><span class='op'>)</span>
+<span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>100</span><span class='op'>)</span>
+<span class='va'>e</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>100</span>, <span class='fl'>0</span>, <span class='fl'>2</span><span class='op'>)</span>
+<span class='va'>y</span> <span class='op'>&lt;-</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='fl'>2</span><span class='op'>*</span><span class='va'>x</span> <span class='op'>+</span> <span class='va'>e</span>
+<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>y</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+-4.2431 -0.8933  0.9077  1.2485  3.2711  9.5515 </code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>y</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="numberthree_files/figure-html5/linearmod-1.png" width="624" /></p>
+</div>
+<p>This proves that I can explore statistical ideas through these probaility distributions. I definitely still need to look this up for help on how to do it, but I believe that I know how to play around with it enough to cover this subobjective.</p>
+<h3 id="i-can-fit-a-regression-model-for-descriptive-analysis.">5. I can fit a regression model for descriptive analysis.</h3>
+<p>I did a multiple regression model to predict the poverty population, which I hope will demonstrate this subobjective. I used backwards selection to get a final model that only included predictors that were significantly contributing to the model. I believe that this is sufficient evidence for this subobjective, because I completed a multiple regression model for descriptive analysis.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>mod_midwest</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>poppovertyknown</span> <span class='op'>~</span> 
+                    <span class='va'>poptotal</span> <span class='op'>+</span> 
+                    <span class='va'>popdensity</span> <span class='op'>+</span> 
+                    <span class='va'>popwhite</span> <span class='op'>+</span> 
+                    <span class='va'>popblack</span> <span class='op'>+</span> 
+                    <span class='va'>popamerindian</span> <span class='op'>+</span> 
+                    <span class='va'>popasian</span>, 
+                  data <span class='op'>=</span> <span class='va'>midwest</span><span class='op'>)</span>
+<span class='va'>reduced_mod_midwest</span> <span class='op'>&lt;-</span> 
+  <span class='fu'><a href='https://rdrr.io/pkg/MASS/man/stepAIC.html'>stepAIC</a></span><span class='op'>(</span><span class='va'>mod_midwest</span>, 
+          direction <span class='op'>=</span> <span class='st'>"backward"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>Start:  AIC=6802.52
+poppovertyknown ~ poptotal + popdensity + popwhite + popblack + 
+    popamerindian + popasian
+
+                Df  Sum of Sq        RSS    AIC
+- popblack       1    1911335 2439554416 6800.9
+- popwhite       1   10104470 2447747550 6802.3
+- popdensity     1   10904042 2448547122 6802.5
+&lt;none&gt;                        2437643080 6802.5
+- popasian       1   15201920 2452845000 6803.2
+- popamerindian  1   16370582 2454013662 6803.4
+- poptotal       1 6936277252 9373920333 7389.1
+
+Step:  AIC=6800.86
+poppovertyknown ~ poptotal + popdensity + popwhite + popamerindian + 
+    popasian
+
+                Df  Sum of Sq        RSS    AIC
+&lt;none&gt;                        2.4396e+09 6800.9
+- popdensity     1 1.4529e+07 2.4541e+09 6801.5
+- popamerindian  1 1.5648e+07 2.4552e+09 6801.7
+- popasian       1 3.9410e+07 2.4790e+09 6805.9
+- popwhite       1 1.4108e+08 2.5806e+09 6823.4
+- poptotal       1 4.9273e+11 4.9517e+11 9120.7</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>reduced_mod_midwest</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>
+Call:
+lm(formula = poppovertyknown ~ poptotal + popdensity + popwhite + 
+    popamerindian + popasian, data = midwest)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-14823.5     67.6    633.4    785.1  10719.9 
+
+Coefficients:
+                Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)   -5.508e+02  1.433e+02  -3.842  0.00014 ***
+poptotal       1.004e+00  3.402e-03 295.046  &lt; 2e-16 ***
+popdensity    -7.322e-02  4.570e-02  -1.602  0.10986    
+popwhite      -2.189e-02  4.384e-03  -4.992 8.67e-07 ***
+popamerindian -3.992e-01  2.401e-01  -1.663  0.09710 .  
+popasian      -1.060e-01  4.018e-02  -2.639  0.00862 ** 
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 2379 on 431 degrees of freedom
+Multiple R-squared:  0.9999,    Adjusted R-squared:  0.9999 
+F-statistic: 1.325e+06 on 5 and 431 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
