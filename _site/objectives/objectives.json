@@ -1,5 +1,39 @@
 [
   {
+    "path": "objectives/2021-12-09-numberfive/",
+    "title": "Write clear, efficient, and well-documented R programs.",
+    "description": {},
+    "author": [
+      {
+        "name": "Courtney Rose",
+        "url": {}
+      }
+    ],
+    "date": "2021-12-16",
+    "categories": [],
+    "contents": "\n1. I can use a project-based workflow to organize and run reproducible analyses.\nI have learned to use Github to store all my RStudio projects/activities/homeworks throughout the semester, so that is how I keep my project-based workflow. I have also learned to use the set.seed() function to get the same results everytime thus proving that I can run reproducible analyses.\n2. I can write professional reports using R Markdown.\nI feel confident working in R Markdown, I also enjoy learning new things along the way and struggling through them. I hope that my reports look professional, but I do think that I have a long way to go and a lot to learn on this aspect. I have definitely improved throughout the semester, so I am going to say that I have achieved this subobjective.\n3. I can call a separate R script containing self-created functions to then be used within an analysis.\nI honestly don’t think I can do this one.\n4. I can write comments that explain the “why” (Why did you choose this approach instead of an alternative? What else did you try that didn’t work?) of my code.\nI think my comments throughout my coding are informative of what I am doing in my code. I always try to write descriptive comments, so that I can go back and not be confused about what I am doing. I am sure that I could improve my brevity, but I am still working on that.\n\n\n\n",
+    "preview": "objectives/2021-12-09-numberfive/write.png",
+    "last_modified": "2021-12-16T18:45:59+00:00",
+    "input_file": {}
+  },
+  {
+    "path": "objectives/2021-12-09-numberfour/",
+    "title": "Use source documentation and other I can identify and correct common errors and in R programs.",
+    "description": {},
+    "author": [
+      {
+        "name": "Courtney Rose",
+        "url": {}
+      }
+    ],
+    "date": "2021-12-16",
+    "categories": [],
+    "contents": "\n1. I can explore new functions or packages and implement them into analyses.\nI hope that this website and all of its features are proof for this subobjective.\nMy favorite package that I have learned outside of the course is {pagedown}. It was really handy for my resume, I want to keep exploring this package, because there is so much that I could not get to this semester. But I will definitely keep this package in mind when building business cards, letters, etc.\nR Documentation is really helpful for me when it comes to understanding new functions or packages that I can use in my projects. I appreciate that R has so much documentation and resources out there, so it makes learning and implementing new packages really simple for users.\n2. I can identify and correct common collaboration errors when working with Git/GitHub.\nThis semester, I have learned everything I know about Github. I had never encountered Github before, but I do feel like this course has made me more comfortable using Github. I can commit, push, pull, create repositories, clone someone else’s repo, connect projects between RStudio and Github, and acknowledge when my code is not up to date with project partners. I am still getting familiar with Github, but it is definitely not a mystery to me anymore like it was on the first day of this course, so I would say that is progress for this subobjective.\n\n\n\n",
+    "preview": "objectives/2021-12-09-numberfour/identify.png",
+    "last_modified": "2021-12-16T18:32:15+00:00",
+    "input_file": {}
+  },
+  {
     "path": "objectives/2021-12-09-numberone/",
     "title": "Import, Manage, and Clean Data",
     "description": {},
@@ -17,23 +51,6 @@
     "input_file": {}
   },
   {
-    "path": "objectives/2021-12-09-numbertwo/",
-    "title": "Create graphical displays  and numerical summaries of data for exploratory analysis and presentations.",
-    "description": {},
-    "author": [
-      {
-        "name": "Courtney Rose",
-        "url": {}
-      }
-    ],
-    "date": "2021-12-16",
-    "categories": [],
-    "contents": "\n\n\nlibrary(tidyverse)\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(reshape2)\nlibrary(MASS)\ndata(\"midwest\")\n\n\n\nFor this set of objectives, I am going to be using the midwest data set that is imported from the ggplot2 package.\n1. I can create tables graph of numerical summaries that draw attention to important comparisons.\nI am going to try to summarize some important facts by each midwest state.\n\n\nmidwest_sum <- midwest %>%\n  group_by(state) %>%\n  summarise(\n    total_population = sum(poptotal),\n    total_population_density = sum(poptotal) / sum(area),\n    avg_white = sum(popwhite) / sum(poptotal),\n    avg_black = sum(popblack) / sum(poptotal),\n    avg_asian = sum(popasian) / sum(poptotal),\n    avg_amerindian = sum(popamerindian) / sum(poptotal),\n    avg_other = sum(popother) / sum(poptotal),\n    avg_poverty = sum(poppovertyknown) / sum(poptotal)) %>%\n  arrange(desc(total_population))\n\nas_tibble(midwest_sum)\n\n\n# A tibble: 5 x 9\n  state total_population total_population_density avg_white avg_black\n  <chr>            <int>                    <dbl>     <dbl>     <dbl>\n1 IL            11430602                 3459625.     0.783    0.148 \n2 OH            10847115                 4480428.     0.878    0.106 \n3 MI             9295297                 2768930.     0.834    0.139 \n4 IN             5544159                 2606563.     0.906    0.0779\n5 WI             4891769                 1488670.     0.922    0.0500\n# … with 4 more variables: avg_asian <dbl>, avg_amerindian <dbl>,\n#   avg_other <dbl>, avg_poverty <dbl>\n\n2. I can create graphical displays of data that highlight key features.\n\n\nggplot(data = midwest) +\n  geom_boxplot(mapping = \n                 aes(x = state, \n                     y = poppovertyknown, \n                     color = state)) +\n  coord_flip() + \n  scale_y_continuous(lim=c(0,300000), name = \"Population living in Poverty\") +\n  labs(title = \"Povery Population by State\")\n\n\n\n\n\n\nggplot(data=midwest_sum, \n       aes(x=state, y=total_population_density, fill=state)) +\n      geom_bar(stat=\"identity\") + \n  scale_y_continuous(breaks=seq(0,5000000, by = 500000),\n                     name = \"Total Population Density\") +\n  scale_x_discrete(name = \"Midwest State\") +\n  labs(title = \"Population Density by State\")\n\n\n\n\n3. I can combine multiple graphical displays or numerical summaries into an effective data product.\n\n\nmidwest$county <- reorder(midwest$inmetro, midwest$popdensity)\nmidwest$state <- reorder(midwest$state, -midwest$popdensity)\nggplot(midwest, aes(popdensity, inmetro)) + \n  geom_point() + \n  facet_grid(state ~ ., scales = \"fixed\") +\n  scale_y_discrete(breaks=seq(0,1,by=1))\n\n\n\n\n\n\n\n",
-    "preview": "objectives/2021-12-09-numbertwo/graphs.png",
-    "last_modified": "2021-12-16T16:36:47+00:00",
-    "input_file": {}
-  },
-  {
     "path": "objectives/2021-12-09-numberthree/",
     "title": "Write R programs for simulations from probability models and randomization-based experiments.",
     "description": {},
@@ -48,11 +65,11 @@
     "contents": "\n\n\nlibrary(tidyverse)\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(broom)\nlibrary(infer)\nlibrary(lmboot)\nlibrary(MASS)\nmidwest\n\n\n# A tibble: 437 x 28\n     PID county    state  area poptotal popdensity popwhite popblack\n   <int> <chr>     <chr> <dbl>    <int>      <dbl>    <int>    <int>\n 1   561 ADAMS     IL    0.052    66090      1271.    63917     1702\n 2   562 ALEXANDER IL    0.014    10626       759      7054     3496\n 3   563 BOND      IL    0.022    14991       681.    14477      429\n 4   564 BOONE     IL    0.017    30806      1812.    29344      127\n 5   565 BROWN     IL    0.018     5836       324.     5264      547\n 6   566 BUREAU    IL    0.05     35688       714.    35157       50\n 7   567 CALHOUN   IL    0.017     5322       313.     5298        1\n 8   568 CARROLL   IL    0.027    16805       622.    16519      111\n 9   569 CASS      IL    0.024    13437       560.    13384       16\n10   570 CHAMPAIGN IL    0.058   173025      2983.   146506    16559\n# … with 427 more rows, and 20 more variables: popamerindian <int>,\n#   popasian <int>, popother <int>, percwhite <dbl>, percblack <dbl>,\n#   percamerindan <dbl>, percasian <dbl>, percother <dbl>,\n#   popadults <int>, perchsd <dbl>, percollege <dbl>, percprof <dbl>,\n#   poppovertyknown <int>, percpovertyknown <dbl>,\n#   percbelowpoverty <dbl>, percchildbelowpovert <dbl>,\n#   percadultpoverty <dbl>, percelderlypoverty <dbl>, inmetro <int>,\n#   category <chr>\n\n1. I can write a function that accomplishes a common analysis task.\n\n\ncalculate_range <- function(x){\n  range_results <- range(x)\n  range <- range_results[2] - range_results[1]\n  return(range)\n}\n\n\n\nCalculating range is a common analysis task that I learned how to create a function for this semester.\n2. I can apply a function to groupings within a data source.\n\n\ncalculate_range(midwest$poptotal)\n\n\n[1] 5103366\n\n\n\ncalculate_range(1:10)\n\n\n[1] 9\n\n3. I can implement resampling methods to make conclusions about data.\nFor this objective, I am going to bring in a new data set to show that I have accomplished this objective throughout the course. I plan to use bootstrapping, or sampling without replacement, to do a one-way ANOVA to understand if there is a difference between the midwest state’s population of people living in poverty.\n\n\nset.seed(19990502)\nANOVA <- ANOVA.boot(poppovertyknown~\n                      as.factor(state),\n                    data=midwest, \n                    B = 10000)\nANOVA$`p-values`\n\n\n[1] 0.5659\n\nFor this example, I did a one-way ANOVA to decide if there was a difference in means between the states of the amount of people that are living in poverty. I set it up to resample 10000 times, got an insignificant p-value, meaning that there is no evidence to suggest that there is a significant difference between each state’s amount of people living in poverty.\n4. I can use common probability distributions to simulate data and explore statistical ideas.\nI learned from this video that was attached to Chapter 20 of the R Programming for Data Science by Roger Peng.\nRandom Number Generation:\n\n\nset.seed(34)\nx <- rnorm(15)\nx\n\n\n [1] -0.138889971  1.199812897 -0.747722402 -0.575248177 -0.263581513\n [6] -0.455492149  0.670620044 -0.849014621  1.066804504 -0.007460534\n[11] -0.402880091  0.719107939 -0.180058654  1.046190759  0.401254928\n\nGenerating a random number from a normal distribution, with a mean of 30 and standard deviation of 4:\n\n\nset.seed(34)\nx <- rnorm(15, mean=30, sd=4)\nsummary(x)\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  26.60   28.28   29.44   30.40   32.78   34.80 \n\nI learned the next step from this video for random numbers from a linear model.\nGenerate random number from a normal linear model, where intercept = 1 and the coefficient for X1 = 2.\n\n\nset.seed(34)\nx <- rnorm(100)\ne <- rnorm(100, 0, 2)\ny <- 1 + 2*x + e\nsummary(y)\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n-4.2431 -0.8933  0.9077  1.2485  3.2711  9.5515 \n\nplot(x, y)\n\n\n\n\nThis proves that I can explore statistical ideas through these probaility distributions. I definitely still need to look this up for help on how to do it, but I believe that I know how to play around with it enough to cover this subobjective.\n5. I can fit a regression model for descriptive analysis.\nI did a multiple regression model to predict the poverty population, which I hope will demonstrate this subobjective. I used backwards selection to get a final model that only included predictors that were significantly contributing to the model. I believe that this is sufficient evidence for this subobjective, because I completed a multiple regression model for descriptive analysis.\n\n\nmod_midwest <- lm(poppovertyknown ~ \n                    poptotal + \n                    popdensity + \n                    popwhite + \n                    popblack + \n                    popamerindian + \n                    popasian, \n                  data = midwest)\nreduced_mod_midwest <- \n  stepAIC(mod_midwest, \n          direction = \"backward\")\n\n\nStart:  AIC=6802.52\npoppovertyknown ~ poptotal + popdensity + popwhite + popblack + \n    popamerindian + popasian\n\n                Df  Sum of Sq        RSS    AIC\n- popblack       1    1911335 2439554416 6800.9\n- popwhite       1   10104470 2447747550 6802.3\n- popdensity     1   10904042 2448547122 6802.5\n<none>                        2437643080 6802.5\n- popasian       1   15201920 2452845000 6803.2\n- popamerindian  1   16370582 2454013662 6803.4\n- poptotal       1 6936277252 9373920333 7389.1\n\nStep:  AIC=6800.86\npoppovertyknown ~ poptotal + popdensity + popwhite + popamerindian + \n    popasian\n\n                Df  Sum of Sq        RSS    AIC\n<none>                        2.4396e+09 6800.9\n- popdensity     1 1.4529e+07 2.4541e+09 6801.5\n- popamerindian  1 1.5648e+07 2.4552e+09 6801.7\n- popasian       1 3.9410e+07 2.4790e+09 6805.9\n- popwhite       1 1.4108e+08 2.5806e+09 6823.4\n- poptotal       1 4.9273e+11 4.9517e+11 9120.7\n\nsummary(reduced_mod_midwest)\n\n\n\nCall:\nlm(formula = poppovertyknown ~ poptotal + popdensity + popwhite + \n    popamerindian + popasian, data = midwest)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-14823.5     67.6    633.4    785.1  10719.9 \n\nCoefficients:\n                Estimate Std. Error t value Pr(>|t|)    \n(Intercept)   -5.508e+02  1.433e+02  -3.842  0.00014 ***\npoptotal       1.004e+00  3.402e-03 295.046  < 2e-16 ***\npopdensity    -7.322e-02  4.570e-02  -1.602  0.10986    \npopwhite      -2.189e-02  4.384e-03  -4.992 8.67e-07 ***\npopamerindian -3.992e-01  2.401e-01  -1.663  0.09710 .  \npopasian      -1.060e-01  4.018e-02  -2.639  0.00862 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2379 on 431 degrees of freedom\nMultiple R-squared:  0.9999,    Adjusted R-squared:  0.9999 \nF-statistic: 1.325e+06 on 5 and 431 DF,  p-value: < 2.2e-16\n\n\n\n\n",
     "preview": "objectives/2021-12-09-numberthree/experiments.png",
     "last_modified": "2021-12-16T18:19:27+00:00",
-    "input_file": "numberthree.knit.md"
+    "input_file": {}
   },
   {
-    "path": "objectives/2021-12-09-numberfour/",
-    "title": "Use source documentation and other I can identify and correct common errors and in R programs.",
+    "path": "objectives/2021-12-09-numbertwo/",
+    "title": "Create graphical displays  and numerical summaries of data for exploratory analysis and presentations.",
     "description": {},
     "author": [
       {
@@ -62,26 +79,9 @@
     ],
     "date": "2021-12-16",
     "categories": [],
-    "contents": "\n1. I can explore new functions or packages and implement them into analyses.\nI hope that this website and all of its features are proof for this subobjective.\nMy favorite package that I have learned outside of the course is {pagedown}. It was really handy for my resume, I want to keep exploring this package, because there is so much that I could not get to this semester. But I will definitely keep this package in mind when building business cards, letters, etc.\nR Documentation is really helpful for me when it comes to understanding new functions or packages that I can use in my projects. I appreciate that R has so much documentation and resources out there, so it makes learning and implementing new packages really simple for users.\n2. I can identify and correct common collaboration errors when working with Git/GitHub.\nThis semester, I have learned everything I know about Github. I had never encountered Github before, but I do feel like this course has made me more comfortable using Github. I can commit, push, pull, create repositories, clone someone else’s repo, connect projects between RStudio and Github, and acknowledge when my code is not up to date with project partners. I am still getting familiar with Github, but it is definitely not a mystery to me anymore like it was on the first day of this course, so I would say that is progress for this subobjective.\n\n\n\n",
-    "preview": "objectives/2021-12-09-numberfour/identify.png",
-    "last_modified": "2021-12-16T18:32:15+00:00",
-    "input_file": "numberfour.knit.md"
-  },
-  {
-    "path": "objectives/2021-12-09-numberfive/",
-    "title": "Write clear, efficient, and well-documented R programs.",
-    "description": {},
-    "author": [
-      {
-        "name": "Courtney Rose",
-        "url": {}
-      }
-    ],
-    "date": "2021-12-10",
-    "categories": [],
-    "contents": "\n\n\n\n",
-    "preview": "objectives/2021-12-09-numberfive/write.png",
-    "last_modified": "2021-12-10T15:55:17+00:00",
+    "contents": "\n\n\nlibrary(tidyverse)\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(reshape2)\nlibrary(MASS)\ndata(\"midwest\")\n\n\n\nFor this set of objectives, I am going to be using the midwest data set that is imported from the ggplot2 package.\n1. I can create tables graph of numerical summaries that draw attention to important comparisons.\nI am going to try to summarize some important facts by each midwest state.\n\n\nmidwest_sum <- midwest %>%\n  group_by(state) %>%\n  summarise(\n    total_population = sum(poptotal),\n    total_population_density = sum(poptotal) / sum(area),\n    avg_white = sum(popwhite) / sum(poptotal),\n    avg_black = sum(popblack) / sum(poptotal),\n    avg_asian = sum(popasian) / sum(poptotal),\n    avg_amerindian = sum(popamerindian) / sum(poptotal),\n    avg_other = sum(popother) / sum(poptotal),\n    avg_poverty = sum(poppovertyknown) / sum(poptotal)) %>%\n  arrange(desc(total_population))\n\nas_tibble(midwest_sum)\n\n\n# A tibble: 5 x 9\n  state total_population total_population_density avg_white avg_black\n  <chr>            <int>                    <dbl>     <dbl>     <dbl>\n1 IL            11430602                 3459625.     0.783    0.148 \n2 OH            10847115                 4480428.     0.878    0.106 \n3 MI             9295297                 2768930.     0.834    0.139 \n4 IN             5544159                 2606563.     0.906    0.0779\n5 WI             4891769                 1488670.     0.922    0.0500\n# … with 4 more variables: avg_asian <dbl>, avg_amerindian <dbl>,\n#   avg_other <dbl>, avg_poverty <dbl>\n\n2. I can create graphical displays of data that highlight key features.\n\n\nggplot(data = midwest) +\n  geom_boxplot(mapping = \n                 aes(x = state, \n                     y = poppovertyknown, \n                     color = state)) +\n  coord_flip() + \n  scale_y_continuous(lim=c(0,300000), name = \"Population living in Poverty\") +\n  labs(title = \"Povery Population by State\")\n\n\n\n\n\n\nggplot(data=midwest_sum, \n       aes(x=state, y=total_population_density, fill=state)) +\n      geom_bar(stat=\"identity\") + \n  scale_y_continuous(breaks=seq(0,5000000, by = 500000),\n                     name = \"Total Population Density\") +\n  scale_x_discrete(name = \"Midwest State\") +\n  labs(title = \"Population Density by State\")\n\n\n\n\n3. I can combine multiple graphical displays or numerical summaries into an effective data product.\n\n\nmidwest$county <- reorder(midwest$inmetro, midwest$popdensity)\nmidwest$state <- reorder(midwest$state, -midwest$popdensity)\nggplot(midwest, aes(popdensity, inmetro)) + \n  geom_point() + \n  facet_grid(state ~ ., scales = \"fixed\") +\n  scale_y_discrete(breaks=seq(0,1,by=1))\n\n\n\n\n\n\n\n",
+    "preview": "objectives/2021-12-09-numbertwo/graphs.png",
+    "last_modified": "2021-12-16T16:36:47+00:00",
     "input_file": {}
   }
 ]

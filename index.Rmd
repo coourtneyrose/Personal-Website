@@ -17,6 +17,10 @@ knitr::opts_chunk$set(echo = FALSE)
 
 </center>
 
+### Reflection
+
+I think that I deserve an A for this course, because I have met almost every objective for the course. I hope to prove that in my **Learning Objectives** tab. This course has made me feel successful in learning and understanding what is actually going on in the code to produce the output that is needed. Thank you for a great semester, I have really enjoyed learning about R and Git/Github!
+
 ### Contents of this website
 
 I have included the learning objectives for STA 518 and evidence that I have satisfied each objective under the **Learning Objectives ** tab. 
@@ -26,6 +30,7 @@ I have included my course project, a resume made with {pagedown}, under the **Co
 I have also included direct links to websites, videos, textbooks, and seminars that I have found helpful throughout my journey of learning R in the **Resources** tab. 
 
 My *LinkedIn* and *Github* pages are available for quick access in the top right-hand corner of the navigation bar.
+
 
 ### Plan of Action
 
