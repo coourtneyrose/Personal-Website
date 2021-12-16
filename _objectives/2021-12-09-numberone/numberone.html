@@ -113,7 +113,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["bitmoji_logo.png","importdata.PNG","numberone_files/anchor-4.2.2/anchor.min.js","numberone_files/bowser-1.9.3/bowser.min.js","numberone_files/distill-2.2.21/template.v2.js","numberone_files/header-attrs-2.9/header-attrs.js","numberone_files/jquery-1.11.3/jquery.min.js","numberone_files/popper-2.6.0/popper.min.js","numberone_files/tippy-6.2.7/tippy-bundle.umd.min.js","numberone_files/tippy-6.2.7/tippy-light-border.css","numberone_files/tippy-6.2.7/tippy.css","numberone_files/tippy-6.2.7/tippy.umd.min.js","numberone_files/webcomponents-2.0.0/webcomponents.js","starbucks_drinkMenu_expanded.csv"]}
+  {"type":"character","attributes":{},"value":["bitmoji_logo.png","coffeedataset.PNG","drinks.PNG","drinksOG.PNG","importdata.PNG","nonfat.PNG","numberone_files/anchor-4.2.2/anchor.min.js","numberone_files/bowser-1.9.3/bowser.min.js","numberone_files/distill-2.2.21/template.v2.js","numberone_files/header-attrs-2.9/header-attrs.js","numberone_files/jquery-1.11.3/jquery.min.js","numberone_files/popper-2.6.0/popper.min.js","numberone_files/tippy-6.2.7/tippy-bundle.umd.min.js","numberone_files/tippy-6.2.7/tippy-light-border.css","numberone_files/tippy-6.2.7/tippy.css","numberone_files/tippy-6.2.7/tippy.umd.min.js","numberone_files/webcomponents-2.0.0/webcomponents.js","starbucks_drinkMenu_expanded.csv","starbucks-food.xls","tidyfood.PNG"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1478,45 +1478,123 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
-<p>The goal: To show my understanding of the learning objectives and provide evidence, I chose a data set about the nutrition facts of Starbucks’ drinks. I hope to use this data set to showcase what I have learned about R throughout the semester.</p>
+<h2 id="the-goal">The goal:</h2>
+<p>To show my understanding of the learning objectives and provide evidence, I chose two data sets about the nutrition facts of Starbucks’ drinks and food. I hope to use these data sets to showcase what I have learned about R throughout the semester.</p>
 <hr />
 <h3 id="i-can-import-data-from-a-variety-of-sources.">1. I can import data from a variety of sources.</h3>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>drinks</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='st'>"~/STA 518/CourseProject/Personal-Website/_objectives/2021-12-09-numberone/
-                   starbucks_drinkMenu_expanded.csv"</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>drinks</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span>
+<span class='st'>"~/STA 518/Course Project/Personal-Website/_objectives/2021-12-09-numberone/starbucks_drinkMenu_expanded.csv"</span>
+<span class='op'>)</span>
+
+<span class='va'>food</span> <span class='op'>&lt;-</span> <span class='fu'>read_excel</span><span class='op'>(</span>
+<span class='st'>"~/STA 518/Course Project/Personal-Website/_objectives/2021-12-09-numberone/starbucks-food.xls"</span>
+<span class='op'>)</span>
 </code></pre>
 </div>
 </div>
-<p><img src="importdata.PNG" /></p>
-<p>The above code chunk proves that I can import data from an external source, a .csv file. I downloaded this dataset onto my computer from Kaggle, then I uploaded the file into R Studio, then read it into my code. If this was an Excel file, I could have used drinks &lt;- read_xlsx("~/STA 518/CourseProject/Personal-Website/ _objectives/2021-12-09-numberone/starbucks_drinkMenu_expanded.xlxs") instead. By showing that I can import both Excel and .csv files, that means that I can import data from a variety of sources.</p>
+<figure>
+<img src="drinksOG.PNG" alt="The drinks data set is in tidy data format." /><figcaption aria-hidden="true">The drinks data set is in tidy data format.</figcaption>
+</figure>
+<figure>
+<img src="drinks.PNG" alt="The food data set is not in tidy data format, so I will fix that later on." /><figcaption aria-hidden="true">The food data set is not in tidy data format, so I will fix that later on.</figcaption>
+</figure>
+<p>The above code chunk proves that I can import data from two external source, a .csv file and a .xls file. I downloaded these data sets onto my computer from Kaggle, then I uploaded the file into R Studio, then read it into my code. Since I downloaded more than one type of file, I think this gives me sufficent evidence to say I can import files from a variety of sources.</p>
 <hr />
 <h3 id="i-can-write-professional-reports-using-r-markdown.">2. I can write professional reports using R Markdown.</h3>
-<div class="layout-chunk" data-layout="l-body">
-
-</div>
+<p>This entire website is made with R Markdown, so I am hoping that is sufficient proof of understanding for this subobjective.</p>
 <hr />
 <h3 id="i-can-isolate-information-from-a-larger-data-source.">3. I can isolate information from a larger data source.</h3>
-I am going to isolate the drinks that contain coffee or espresso. Coffee is usually my drink of choice, so I want to compare between the different types. This includes coffee, classic and signature espresso drinks, and frappuccinos.
+<p>I am starting with the drinks data set. I am going to isolate the drinks that contain coffee or espresso. Coffee is usually my drink of choice, so I want to compare between the different types. This includes coffee, classic and signature espresso drinks, iced coffee, and frappuccinos.</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>coffee</span> <span class='op'>&lt;-</span> <span class='va'>drinks</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>102</span>, <span class='fl'>155</span><span class='op'>:</span><span class='fl'>166</span>, <span class='fl'>182</span><span class='op'>:</span><span class='fl'>229</span><span class='op'>)</span>, <span class='op'>]</span>
+</code></pre>
 </div>
+</div>
+<p><img src="coffeedataset.PNG" /></p>
+<p>The above code chunk subsetted the imported data set into a smaller dataset that only contains drinks with coffee or espresso. The first few rows and columns can be seen in the attached photo above.</p>
+<p>I also usually get my drinks with nonfat milk, so I filtered the dataset, as seen in the code chunk below, to only drinks that were made with nonfat milk. This data is only 59 observations compared to the 242 observations that I started with.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>nonfat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>coffee</span>, <span class='fu'>str_detect</span><span class='op'>(</span><span class='va'>Beverage_prep</span>, <span class='st'>"Nonfat"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<figure>
+<img src="nonfat.PNG" alt="Now this data set only contains drinks with coffee and espresso that are made with nonfat milk." /><figcaption aria-hidden="true">Now this data set only contains drinks with coffee and espresso that are made with nonfat milk.</figcaption>
+</figure>
 <hr />
-<h3 id="i-can-combine-information-from-multiple-data-sources.">4. I can combine information from multiple data sources.</h3>
+<h3 id="i-can-restructure-information-to-be-in-a-tidy-format.">4. I can restructure information to be in a “tidy” format.</h3>
+<p>The drinks data set is already tidy, but the food data set is not. It has all variables in one column that are separated by commas.</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>tidyfood</span> <span class='op'>&lt;-</span> <span class='va'>food</span> <span class='op'>%&gt;%</span>
+<span class='fu'>separate</span><span class='op'>(</span><span class='va'>`, Calories, Fat (g), Carb. (g), Fiber (g), Protein (g)`</span>, 
+         into <span class='op'>=</span> 
+           <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Name"</span>, 
+             <span class='st'>"Calories"</span>, 
+             <span class='st'>"Fat"</span>, 
+             <span class='st'>"Carbohydrates"</span>, 
+              <span class='st'>"Fiber"</span>, 
+             <span class='st'>"Protein"</span><span class='op'>)</span>, 
+         sep <span class='op'>=</span> <span class='st'>","</span><span class='op'>)</span>
+</code></pre>
 </div>
+</div>
+<figure>
+<img src="tidyfood.PNG" alt="Now this data is tidy!" /><figcaption aria-hidden="true">Now this data is tidy!</figcaption>
+</figure>
+<p>Now this data set is tidy, because it fits all three criteria for tidy data. I know that there are other functions for making data tidy, like pivot_longer() or pivot_wider(), but I did not need to use any of those functions to make my data tidy. I think my example proves that I can recognize untidy data and make it tidy, so I feel like I have a good understanding of this subobjective.</p>
 <hr />
-<h3 id="i-can-restructure-information-to-be-in-a-tidy-format.">5. I can restructure information to be in a “tidy” format.</h3>
+<h3 id="i-can-combine-information-from-multiple-data-sources.">5. I can combine information from multiple data sources.</h3>
+<p>I want to combine the filtered down drink data set with the food data set. First, I selected the columns that were in both, then changed the names to make them the same, then I used union() to combine the datasets.</p>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>filtereddrinks</span> <span class='op'>&lt;-</span> <span class='va'>nonfat</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>select</span><span class='op'>(</span><span class='st'>"Beverage"</span>, 
+         <span class='st'>"Calories"</span>, 
+         <span class='st'>"Total Fat (g)"</span>, 
+         <span class='st'>"Total Carbohydrates (g)"</span>, 
+         <span class='st'>"Dietary Fibre (g)"</span>, 
+         <span class='st'>"Protein (g)"</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>set_names</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Name"</span>, 
+              <span class='st'>"Calories"</span>, 
+              <span class='st'>"Fat"</span>, 
+              <span class='st'>"Carbohydrates"</span>, 
+              <span class='st'>"Fiber"</span>, 
+              <span class='st'>"Protein"</span><span class='op'>)</span><span class='op'>)</span>
 
+
+<span class='va'>fooddrink</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span><span class='op'>(</span><span class='va'>filtereddrinks</span>, <span class='va'>tidyfood</span><span class='op'>)</span>
+</code></pre>
 </div>
+</div>
+<p>I combined all the food and drink observations, so I combined information from two data sources.</p>
 <hr />
 <h3 id="i-can-transform-information-to-be-in-a-format-better-suited-for-specific-tasks.">6. I can transform information to be in a format better suited for specific tasks.</h3>
+<p>A specific task I will do is summarize the calories, sugar, and carbohydrates by each beverage category. I will use the filtered drink data set, which only contains the nonfat, coffee/espresso drinks.</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>nonfat</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>Beverage_category</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>summarise</span><span class='op'>(</span>
+    avg_calories <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>Calories</span><span class='op'>)</span>, 
+    avg_sugar <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>`Sugars (g)`</span><span class='op'>)</span>, 
+    avg_carbs <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>`Total Carbohydrates (g)`</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<pre><code># A tibble: 5 x 4
+  Beverage_category                  avg_calories avg_sugar avg_carbs
+  &lt;chr&gt;                                     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+1 Classic Espresso Drinks                    134.      20.4      119.
+2 Frappuccino® Blended Coffee               268.      58        231.
+3 Frappuccino® Light Blended Coffee         162.      32.4      218.
+4 Shaken Iced Beverages                      117.      26         35 
+5 Signature Espresso Drinks                  233.      39.1      153.</code></pre>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

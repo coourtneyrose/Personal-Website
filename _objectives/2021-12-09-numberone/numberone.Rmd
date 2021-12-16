@@ -17,67 +17,132 @@ knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
 library(ggplot2)
 library(dplyr)
+library(stringr)
+library(readxl)
 ```
-The goal: To show my understanding of the learning objectives and provide evidence, I chose a data set about the nutrition facts of Starbucks' drinks. I hope to use this data set to showcase what I have learned about R throughout the semester. 
+
+## The goal: 
+To show my understanding of the learning objectives and provide evidence, I chose two data sets about the nutrition facts of Starbucks' drinks and food. I hope to use these data sets to showcase what I have learned about R throughout the semester. 
 
 --------------------------------------
 
 ### 1. I can import data from a variety of sources.
 
 ```{r importdata, echo=TRUE}
-drinks <- read_csv("~/STA 518/CourseProject/Personal-Website/_objectives/2021-12-09-numberone/
-                   starbucks_drinkMenu_expanded.csv")
+drinks <- read_csv(
+"~/STA 518/Course Project/Personal-Website/_objectives/2021-12-09-numberone/starbucks_drinkMenu_expanded.csv"
+)
+
+food <- read_excel(
+"~/STA 518/Course Project/Personal-Website/_objectives/2021-12-09-numberone/starbucks-food.xls"
+)
 ```
 
-![](~/STA 518/Course Project/Personal-Website/_objectives/2021-12-09-numberone/importdata.PNG)
+![The drinks data set is in tidy data format.](~/STA 518/Course Project/Personal-Website/_objectives/2021-12-09-numberone/drinksOG.PNG)
 
+![The food data set is not in tidy data format, so I will fix that later on.](~/STA 518/Course Project/Personal-Website/_objectives/2021-12-09-numberone/drinks.PNG)
 
-The above code chunk proves that I can import data from an external source, a .csv file. 
-I downloaded this dataset onto my computer from Kaggle, then I uploaded the file into
-R Studio, then read it into my code. If this was an Excel file, I could have used
-drinks <- read_xlsx("~/STA 518/CourseProject/Personal-Website/
-_objectives/2021-12-09-numberone/starbucks_drinkMenu_expanded.xlxs") instead. By showing that I can import both Excel and .csv files, that means that I can import data from a variety of sources.
+The above code chunk proves that I can import data from two external source, a .csv file and a .xls file. 
+I downloaded these data sets onto my computer from Kaggle, then I uploaded the file into
+R Studio, then read it into my code. Since I downloaded more than one type of file, I think this gives me sufficent evidence to say I can import files from a variety of sources. 
 
 
 --------------------------------------
 
 ### 2. I can write professional reports using R Markdown.
-```{r professional_reports, message=TRUE}
 
-```
+This entire website is made with R Markdown, so I am hoping that is sufficient proof of understanding for this subobjective.
 
 --------------------------------------
 
 ### 3. I can isolate information from a larger data source.
 
-I am going to isolate the drinks that contain coffee or espresso. Coffee is usually
+I am starting with the drinks data set. I am going to isolate the drinks that contain coffee or espresso. Coffee is usually
 my drink of choice, so I want to compare between the different types. This includes coffee,
-classic and signature espresso drinks, and frappuccinos. 
-```{r isolate, message=TRUE}
+classic and signature espresso drinks, iced coffee, and frappuccinos. 
 
+```{r isolate, echo=TRUE}
+coffee <- drinks[c(1:102, 155:166, 182:229), ]
 ```
 
+![](~/STA 518/Course Project/Personal-Website/_objectives/2021-12-09-numberone/coffeedataset.PNG)
+
+The above code chunk subsetted the imported data set into a smaller dataset
+that only contains drinks with coffee or espresso. The first few rows and columns can be seen in the attached photo above.
+
+
+I also usually get my drinks with nonfat milk, so I filtered the dataset, as seen in the code chunk below, to only drinks that were made with nonfat milk. This data is only 59 observations compared to the 242 observations that I started with.
+
+```{r filterfurther, echo=TRUE}
+nonfat <- filter(coffee, str_detect(Beverage_prep, "Nonfat"))
+```
+
+![Now this data set only contains drinks with coffee and espresso that are made with nonfat milk.](~/STA 518/Course Project/Personal-Website/_objectives/2021-12-09-numberone/nonfat.PNG)
 
 --------------------------------------
 
-### 4. I can combine information from multiple data sources.
-```{r combine, message=TRUE}
 
+### 4. I can restructure information to be in a “tidy” format.
+
+The drinks data set is already tidy, but the food data set is not. It has all variables in one column that are separated by commas. 
+
+```{r tidydata, echo=TRUE}
+tidyfood <- food %>%
+separate(`, Calories, Fat (g), Carb. (g), Fiber (g), Protein (g)`, 
+         into = 
+           c("Name", 
+             "Calories", 
+             "Fat", 
+             "Carbohydrates", 
+              "Fiber", 
+             "Protein"), 
+         sep = ",")
 ```
 
+![Now this data is tidy!](~/STA 518/Course Project/Personal-Website/_objectives/2021-12-09-numberone/tidyfood.PNG)
+
+Now this data set is tidy, because it fits all three criteria for tidy data. I know that there are other functions for making data tidy, like pivot_longer() or pivot_wider(), but I did not need to use any of those functions to make my data tidy. I think my example proves that I can recognize untidy data and make it tidy, so I feel like I have a good understanding of this subobjective.
 
 --------------------------------------
 
-### 5. I can restructure information to be in a “tidy” format.
-```{r tidydata, message=TRUE}
+### 5. I can combine information from multiple data sources.
 
+I want to combine the filtered down drink data set with the food data set. First, I selected the columns that were in both, then changed the names to make them the same, then I used union() to combine the datasets.
+
+```{r combine, echo=TRUE}
+filtereddrinks <- nonfat %>%
+  select("Beverage", 
+         "Calories", 
+         "Total Fat (g)", 
+         "Total Carbohydrates (g)", 
+         "Dietary Fibre (g)", 
+         "Protein (g)") %>%
+  set_names(c("Name", 
+              "Calories", 
+              "Fat", 
+              "Carbohydrates", 
+              "Fiber", 
+              "Protein"))
+
+
+fooddrink <- rbind(filtereddrinks, tidyfood)
 ```
 
+I combined all the food and drink observations, so I combined information from two data sources.
 
 --------------------------------------
+
 ### 6. I can transform information to be in a format better suited for specific tasks.
-```{r transform, message=TRUE}
 
+A specific task I will do is summarize the calories, sugar, and carbohydrates by each beverage category. I will use the filtered drink data set, which only contains the nonfat, coffee/espresso drinks.
+
+```{r transform, echo=TRUE}
+nonfat %>%
+  group_by(Beverage_category) %>%
+  summarise(
+    avg_calories = mean(Calories), 
+    avg_sugar = mean(`Sugars (g)`), 
+    avg_carbs = mean(`Total Carbohydrates (g)`))
 ```
 
 
