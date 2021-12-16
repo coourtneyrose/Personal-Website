@@ -51,6 +51,23 @@
     "input_file": "numberthree.knit.md"
   },
   {
+    "path": "objectives/2021-12-09-numberfour/",
+    "title": "Use source documentation and other I can identify and correct common errors and in R programs.",
+    "description": {},
+    "author": [
+      {
+        "name": "Courtney Rose",
+        "url": {}
+      }
+    ],
+    "date": "2021-12-16",
+    "categories": [],
+    "contents": "\n1. I can explore new functions or packages and implement them into analyses.\nI hope that this website and all of its features are proof for this subobjective.\nMy favorite package that I have learned outside of the course is {pagedown}. It was really handy for my resume, I want to keep exploring this package, because there is so much that I could not get to this semester. But I will definitely keep this package in mind when building business cards, letters, etc.\nR Documentation is really helpful for me when it comes to understanding new functions or packages that I can use in my projects. I appreciate that R has so much documentation and resources out there, so it makes learning and implementing new packages really simple for users.\n2. I can identify and correct common collaboration errors when working with Git/GitHub.\nThis semester, I have learned everything I know about Github. I had never encountered Github before, but I do feel like this course has made me more comfortable using Github. I can commit, push, pull, create repositories, clone someone else’s repo, connect projects between RStudio and Github, and acknowledge when my code is not up to date with project partners. I am still getting familiar with Github, but it is definitely not a mystery to me anymore like it was on the first day of this course, so I would say that is progress for this subobjective.\n\n\n\n",
+    "preview": "objectives/2021-12-09-numberfour/identify.png",
+    "last_modified": "2021-12-16T18:32:15+00:00",
+    "input_file": "numberfour.knit.md"
+  },
+  {
     "path": "objectives/2021-12-09-numberfive/",
     "title": "Write clear, efficient, and well-documented R programs.",
     "description": {},
@@ -65,23 +82,6 @@
     "contents": "\n\n\n\n",
     "preview": "objectives/2021-12-09-numberfive/write.png",
     "last_modified": "2021-12-10T15:55:17+00:00",
-    "input_file": {}
-  },
-  {
-    "path": "objectives/2021-12-09-numberfour/",
-    "title": "Use source documentation and other I can identify and correct common errors and in R programs.",
-    "description": {},
-    "author": [
-      {
-        "name": "Courtney Rose",
-        "url": {}
-      }
-    ],
-    "date": "2021-12-10",
-    "categories": [],
-    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": "objectives/2021-12-09-numberfour/identify.png",
-    "last_modified": "2021-12-10T15:50:42+00:00",
     "input_file": {}
   }
 ]

@@ -14,8 +14,16 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+### 1. I can explore new functions or packages and implement them into analyses.
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+I hope that this website and all of its features are proof for this subobjective. 
 
+My favorite package that I have learned outside of the course is {pagedown}. It was really handy for my resume, I want to keep exploring this package, because there is so much that I could not get to this semester. But I will definitely keep this package in mind when building business cards, letters, etc.
+
+R Documentation is really helpful for me when it comes to understanding new functions or packages that I can use in my projects. I appreciate that R has so much documentation and resources out there, so it makes learning and implementing new packages really simple for users. 
+
+
+### 2. I can identify and correct common collaboration errors when working with Git/GitHub.
+
+This semester, I have learned everything I know about Github. I had never encountered Github before, but I do feel like this course has made me more comfortable using Github. I can commit, push, pull, create repositories, clone someone else's repo, connect projects between RStudio and Github, and acknowledge when my code is not up to date with project partners. I am still getting familiar with Github, but it is definitely not a mystery to me anymore like it was on the first day of this course, so I would say that is progress for this subobjective.
 
