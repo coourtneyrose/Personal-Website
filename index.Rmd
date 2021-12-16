@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### Reflection
 
-I think that I deserve an A for this course, because I have met almost every objective for the course. I hope to prove that in my **Learning Objectives** tab. This course has made me feel successful in learning and understanding what is actually going on in the code to produce the output that is needed. Thank you for a great semester, I have really enjoyed learning about R and Git/Github!
+I think that I deserve an A for this course, because I have met almost every objective for the course. I hope to prove that in my **Learning Objectives** tab. This course has made me feel successful in learning and understanding what is actually going on in the code to produce the output that is needed. I am particularly proud of this website and how much work I put into it. I knew nothing about R when I entered this course and honestly thought that creating a website was way out of my league. This class gave me the confidence that I needed in R to accomplish something that I am really proud of and hope to continue to make better. Thank you for a great semester, I have really enjoyed learning about R and Git/Github!
 
 ### Contents of this website
 
