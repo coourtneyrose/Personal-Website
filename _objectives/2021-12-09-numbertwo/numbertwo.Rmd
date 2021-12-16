@@ -14,8 +14,71 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+```{r packages, echo=TRUE}
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(reshape2)
+library(MASS)
+data("midwest")
+```
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+For this set of objectives, I am going to be using the midwest data set that is imported from the ggplot2 package. 
+
+### 1. I can create tables  graph of numerical summaries that draw attention to important comparisons.
+
+I am going to try to summarize some important facts by each midwest state. 
+
+```{r num_sum, echo=TRUE}
+midwest_sum <- midwest %>%
+  group_by(state) %>%
+  summarise(
+    total_population = sum(poptotal),
+    total_population_density = sum(poptotal) / sum(area),
+    avg_white = sum(popwhite) / sum(poptotal),
+    avg_black = sum(popblack) / sum(poptotal),
+    avg_asian = sum(popasian) / sum(poptotal),
+    avg_amerindian = sum(popamerindian) / sum(poptotal),
+    avg_other = sum(popother) / sum(poptotal),
+    avg_poverty = sum(poppovertyknown) / sum(poptotal)) %>%
+  arrange(desc(total_population))
+
+as_tibble(midwest_sum)
+```
+
+
+### 2. I can create graphical displays of data that highlight key features.
+
+```{r graphs, echo= TRUE}
+ggplot(data = midwest) +
+  geom_boxplot(mapping = 
+                 aes(x = state, 
+                     y = poppovertyknown, 
+                     color = state)) +
+  coord_flip() + 
+  scale_y_continuous(lim=c(0,300000), name = "Population living in Poverty") +
+  labs(title = "Povery Population by State")
+```
+```{r graph2, echo=TRUE}
+ggplot(data=midwest_sum, 
+       aes(x=state, y=total_population_density, fill=state)) +
+      geom_bar(stat="identity") + 
+  scale_y_continuous(breaks=seq(0,5000000, by = 500000),
+                     name = "Total Population Density") +
+  scale_x_discrete(name = "Midwest State") +
+  labs(title = "Population Density by State")
+```
+
+### 3. I can combine multiple graphical displays or numerical summaries into an effective data product.
+
+```{r combine, echo=TRUE}
+midwest$county <- reorder(midwest$inmetro, midwest$popdensity)
+midwest$state <- reorder(midwest$state, -midwest$popdensity)
+ggplot(midwest, aes(popdensity, inmetro)) + 
+  geom_point() + 
+  facet_grid(state ~ ., scales = "fixed") +
+  scale_y_discrete(breaks=seq(0,1,by=1))
+```
+
 
 

@@ -17,6 +17,23 @@
     "input_file": "numberone.knit.md"
   },
   {
+    "path": "objectives/2021-12-09-numbertwo/",
+    "title": "Create graphical displays  and numerical summaries of data for exploratory analysis and presentations.",
+    "description": {},
+    "author": [
+      {
+        "name": "Courtney Rose",
+        "url": {}
+      }
+    ],
+    "date": "2021-12-16",
+    "categories": [],
+    "contents": "\n\n\nlibrary(tidyverse)\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(reshape2)\nlibrary(MASS)\ndata(\"midwest\")\n\n\n\nFor this set of objectives, I am going to be using the midwest data set that is imported from the ggplot2 package.\n1. I can create tables graph of numerical summaries that draw attention to important comparisons.\nI am going to try to summarize some important facts by each midwest state.\n\n\nmidwest_sum <- midwest %>%\n  group_by(state) %>%\n  summarise(\n    total_population = sum(poptotal),\n    total_population_density = sum(poptotal) / sum(area),\n    avg_white = sum(popwhite) / sum(poptotal),\n    avg_black = sum(popblack) / sum(poptotal),\n    avg_asian = sum(popasian) / sum(poptotal),\n    avg_amerindian = sum(popamerindian) / sum(poptotal),\n    avg_other = sum(popother) / sum(poptotal),\n    avg_poverty = sum(poppovertyknown) / sum(poptotal)) %>%\n  arrange(desc(total_population))\n\nas_tibble(midwest_sum)\n\n\n# A tibble: 5 x 9\n  state total_population total_population_density avg_white avg_black\n  <chr>            <int>                    <dbl>     <dbl>     <dbl>\n1 IL            11430602                 3459625.     0.783    0.148 \n2 OH            10847115                 4480428.     0.878    0.106 \n3 MI             9295297                 2768930.     0.834    0.139 \n4 IN             5544159                 2606563.     0.906    0.0779\n5 WI             4891769                 1488670.     0.922    0.0500\n# … with 4 more variables: avg_asian <dbl>, avg_amerindian <dbl>,\n#   avg_other <dbl>, avg_poverty <dbl>\n\n2. I can create graphical displays of data that highlight key features.\n\n\nggplot(data = midwest) +\n  geom_boxplot(mapping = \n                 aes(x = state, \n                     y = poppovertyknown, \n                     color = state)) +\n  coord_flip() + \n  scale_y_continuous(lim=c(0,300000), name = \"Population living in Poverty\") +\n  labs(title = \"Povery Population by State\")\n\n\n\n\n\n\nggplot(data=midwest_sum, \n       aes(x=state, y=total_population_density, fill=state)) +\n      geom_bar(stat=\"identity\") + \n  scale_y_continuous(breaks=seq(0,5000000, by = 500000),\n                     name = \"Total Population Density\") +\n  scale_x_discrete(name = \"Midwest State\") +\n  labs(title = \"Population Density by State\")\n\n\n\n\n3. I can combine multiple graphical displays or numerical summaries into an effective data product.\n\n\nmidwest$county <- reorder(midwest$inmetro, midwest$popdensity)\nmidwest$state <- reorder(midwest$state, -midwest$popdensity)\nggplot(midwest, aes(popdensity, inmetro)) + \n  geom_point() + \n  facet_grid(state ~ ., scales = \"fixed\") +\n  scale_y_discrete(breaks=seq(0,1,by=1))\n\n\n\n\n\n\n\n",
+    "preview": "objectives/2021-12-09-numbertwo/graphs.png",
+    "last_modified": "2021-12-16T16:36:47+00:00",
+    "input_file": "numbertwo.knit.md"
+  },
+  {
     "path": "objectives/2021-12-09-numberfive/",
     "title": "Write clear, efficient, and well-documented R programs.",
     "description": {},
@@ -65,23 +82,6 @@
     "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
     "preview": "objectives/2021-12-09-numberthree/experiments.png",
     "last_modified": "2021-12-10T15:49:33+00:00",
-    "input_file": {}
-  },
-  {
-    "path": "objectives/2021-12-09-numbertwo/",
-    "title": "Create graphical displays  and numerical summaries of data for exploratory analysis and presentations.",
-    "description": {},
-    "author": [
-      {
-        "name": "Courtney Rose",
-        "url": {}
-      }
-    ],
-    "date": "2021-12-10",
-    "categories": [],
-    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": "objectives/2021-12-09-numbertwo/graphs.png",
-    "last_modified": "2021-12-10T15:48:01+00:00",
     "input_file": {}
   }
 ]
