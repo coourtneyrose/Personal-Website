@@ -47,7 +47,7 @@ Clifton Strengths {#clifton}
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Click [here](https://courtney-m-rose.netlify.app/) to go back to my personal website.
+Click [here](https://courtney-m-rose.netlify.app/) to go to my personal website.
 
 This resume was made with the R package [**pagedown**](https://github.com/rstudio/pagedown).
 
@@ -81,7 +81,7 @@ Grand Rapids, Michigan
 
 2023
 
-Data Science Society
+GPA: 4.0
 
 ### Grand Valley State University
 
@@ -91,7 +91,7 @@ Grand Rapids, Michigan
 
 2021
 
-GPA: 0.0
+GPA: 3.65
   
 
 Professional Experience {data-icon=suitcase}
@@ -99,7 +99,7 @@ Professional Experience {data-icon=suitcase}
 
 ### Graduate Assistant
 
-Grand Valley State University Statistics Department
+Grand Valley State University
 
 Grand Rapids, Michigan
 

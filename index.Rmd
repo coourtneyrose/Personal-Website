@@ -29,9 +29,9 @@ After graduation from my program in May 2023, I hope to be at a hospital assisti
 
 I have included the learning objectives from a course that helped me learned R. Each objective has several sub-objectives. I go through each learning objective in depth in the **Learning Objective** tab.
 
-I have included an additional resume that I create within R under the **Resume** tab. 
+I have included an additional resume that I created within R under the **Resume** tab. 
 
-I have also included direct links to websites, videos, textbooks, and seminars that I have found helpful throughout my journey of learning R in the **Resources** tab. 
+I have also included direct links to websites, videos, textbooks, and seminars that I have found helpful throughout my journey of learning R in the **Resources** tab. There are so many great educators out there that helped me throughout my journey of learning R.
 
 My *LinkedIn* and *Github* pages are available for quick access with the icons in the top right-hand corner of the navigation bar.
 
