@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = FALSE)
 </center>
 
 ### Currently searching...
-I am currently searching for an **internship** for the summer of 2022. My goal for an internship is to master my coding skills in R and/or SAS, build a solid foundation to begin my career in biostatistics, creating a network of great contacts and mentors, and getting real world experience in statistics and data analysis. 
+I am currently searching for an **internship** for the summer of 2022. My goal for an internship is to *master my coding skills in R and/or SAS, build a solid foundation to begin my career in biostatistics, creating a network of great contacts and mentors, and getting real world experience in statistics and data analysis*. 
 
 ### Personal statement
 I am a graduate student at Grand Valley State University studying biostatistics. I built this website for one of my graduate courses, while I was learning R. I hope that this website showcases my abilities in R, because this entire website was built in R. I mostly used the {distill} package to build the structure of the website, {tidyverse}, and {pagedown} to create an additional resume. I also have added some personal touches that I hope will showcase my personality. This website is linked to a [Github repository](https://github.com/coourtneyrose/Personal-Website) to allow me to quickly see the previous versions of this website.
